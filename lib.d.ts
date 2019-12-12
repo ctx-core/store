@@ -1,11 +1,12 @@
 import { Writable, Readable } from 'svelte/store';
+export declare type Stores = Readable<any> | [Readable<any>, ...Array<Readable<any>>];
 /**
  * Asserts fn is a function then creates a derived stores
  * @param {Stores} stores
  * @param {function} fn
  * @returns {Readable}
  */
-export declare function derived__assert(stores: any, fn: any, initial_value?: any): Readable<any>;
+export declare function derived__assert<S extends Stores, T>(stores: any, fn: any, initial_value?: any): Readable<T>;
 export declare const derived: typeof derived__assert;
 /**
  * Spreads the first argument into the fn.
@@ -14,7 +15,7 @@ export declare const derived: typeof derived__assert;
  * @returns {Readable}
  * @see nowrap__a1
  */
-export declare function derived__spread(stores: [Readable<any>, ...Readable<any>[]], fn: any, initial_value?: any): Readable<any>;
+export declare function derived__spread<S extends Stores, T>(stores: [Readable<any>, ...Readable<any>[]], fn: any, initial_value?: any): Readable<T>;
 /**
  * Delegates to store.subscribe
  * @param {Readable} store
