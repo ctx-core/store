@@ -9,6 +9,7 @@ import {
 import { _spread, each, map } from '@ctx-core/array'
 import { I } from '@ctx-core/combinators'
 import { call, _a1__wrap } from '@ctx-core/function'
+export type Stores = Readable<any> | [Readable<any>, ...Array<Readable<any>>];
 declare const Array
 /**
  * Asserts fn is a function then creates a derived stores
@@ -16,13 +17,13 @@ declare const Array
  * @param {function} fn
  * @returns {Readable}
  */
-export function derived__assert(stores, fn, initial_value?) {
+export function derived__assert<S extends Stores, T>(stores, fn, initial_value?) {
 	if (typeof fn !== 'function') {
 		const message__error = 'fn is not a function'
 		console.trace(message__error)
 		throw message__error
 	}
-	return derived__store(stores, fn, initial_value)
+	return derived__store<S, T>(stores, fn, initial_value)
 }
 export const derived = derived__assert
 /**
@@ -32,8 +33,8 @@ export const derived = derived__assert
  * @returns {Readable}
  * @see nowrap__a1
  */
-export function derived__spread(stores:[Readable<any>, ...Readable<any>[]], fn, initial_value?) {
-	return derived(stores, _spread(fn), initial_value)
+export function derived__spread<S extends Stores, T>(stores:[Readable<any>, ...Readable<any>[]], fn, initial_value?) {
+	return derived<S, T>(stores, _spread(fn), initial_value)
 }
 /**
  * Delegates to store.subscribe
