@@ -250,17 +250,17 @@ export const ctx__global = {}
  * @param key
  */
 export function _ensure__store<T>(
-	_store:(ctx?:any, key?:string|symbol, opts?:any)=>T,
-	key?:string|symbol,
-):(ctx?:any, opts?:any)=>T;
-export function _ensure__store<T>(
 	_store:(ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]],
 	key?:string|symbol,
 ):(ctx?:any, opts?:any)=>[T, ...any[]];
 export function _ensure__store<T>(
-	_store:(ctx?:any, key?:string|symbol, opts?:any)=>(T|[T, ...any[]]),
+	_store:(ctx?:any, key?:string|symbol, opts?:any)=>T,
+	key?:string|symbol,
+):(ctx?:any, opts?:any)=>T;
+export function _ensure__store<T>(
+	_store:(ctx?:any, key?:string|symbol, opts?:any)=>([T, ...any[]]|T),
 	key:string|symbol = Symbol(),
-):(ctx?:any, opts?:any)=>(T|[T, ...any[]]) {
+):(ctx?:any, opts?:any)=>([T, ...any[]]|T) {
 	return (ctx?, opts?)=>{
 		if (!ctx) ctx = ctx__global
 		if (!ctx[key]) {
@@ -275,13 +275,6 @@ export function _ensure__store<T>(
 	}
 }
 export function _ensure__store__instance<T>(
-	_store:(ctx?:any, key?:string|symbol, opts?:any)=>T,
-	key?:string|symbol,
-):[
-	(ctx?:any, opts?:any)=>T,
-	T,
-];
-export function _ensure__store__instance<T>(
 	_store:(ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]],
 	key?:string|symbol,
 ):[
@@ -290,7 +283,14 @@ export function _ensure__store__instance<T>(
 	...any[],
 ];
 export function _ensure__store__instance<T>(
-	_store:(ctx?:any, key?:string|symbol, opts?:any)=>(T|[T, ...any[]]),
+	_store:(ctx?:any, key?:string|symbol, opts?:any)=>T,
+	key?:string|symbol,
+):[
+	(ctx?:any, opts?:any)=>T,
+	T,
+];
+export function _ensure__store__instance<T>(
+	_store:(ctx?:any, key?:string|symbol, opts?:any)=>([T, ...any[]]|T),
 	key:string|symbol = Symbol(),
 ):[
 	(
