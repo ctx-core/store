@@ -6,7 +6,7 @@ import {
 	Writable,
 	Readable,
 } from 'svelte/store'
-import { _spread, each, map } from '@ctx-core/array'
+import { _spread, flatten, each, map } from '@ctx-core/array'
 import { I } from '@ctx-core/combinators'
 import { call, _a1__wrap } from '@ctx-core/function'
 export type Stores = Readable<any> | [Readable<any>, ...Array<Readable<any>>];
@@ -256,15 +256,16 @@ export function _ensure__store<T>(
 	return (ctx?, opts?)=>{
 		if (!ctx) ctx = ctx__global
 		if (!ctx[key]) {
-			ctx[key] = _store(ctx, key, opts)
+			ctx[key] = flatten([_store(ctx, key, opts)])
 		}
-		return ctx[key] as T
+		return ctx[key] as [T, ...any[]]
 	}
 }
 export function _ensure__store__instance<T>(
 	_store:(ctx?:any, key?:string|symbol, opts?:any)=>T,
 	key:string|symbol=Symbol(),
-):[(ctx?:any, key?:string|symbol, opts?:any)=>T, T] {
+):[(ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]], T, ...any[]] {
   const ensure__store = _ensure__store<T>(_store, key)
-	return [ensure__store, ensure__store()]
+	const [val, ...rest] = ensure__store()
+	return [ensure__store, val, ...rest]
 }
