@@ -6,10 +6,10 @@ import {
 	Writable,
 	Readable,
 } from 'svelte/store'
-import { _spread, flatten, each, map } from '@ctx-core/array'
+import { _spread, each, map } from '@ctx-core/array'
 import { I } from '@ctx-core/combinators'
 import { call, _a1__wrap } from '@ctx-core/function'
-export type Stores = Readable<any> | [Readable<any>, ...Array<Readable<any>>];
+export type Stores = Readable<any>|[Readable<any>, ...Array<Readable<any>>];
 declare const Array
 /**
  * Asserts fn is a function then creates a derived stores
@@ -251,21 +251,63 @@ export const ctx__global = {}
  */
 export function _ensure__store<T>(
 	_store:(ctx?:any, key?:string|symbol, opts?:any)=>T,
-	key:string|symbol=Symbol(),
-) {
+	key?:string|symbol,
+):(ctx?:any, opts?:any)=>T;
+export function _ensure__store<T>(
+	_store:(ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]],
+	key?:string|symbol,
+):(ctx?:any, opts?:any)=>[T, ...any[]];
+export function _ensure__store<T>(
+	_store:(ctx?:any, key?:string|symbol, opts?:any)=>(T|[T, ...any[]]),
+	key:string|symbol = Symbol(),
+):(ctx?:any, opts?:any)=>(T|[T, ...any[]]) {
 	return (ctx?, opts?)=>{
 		if (!ctx) ctx = ctx__global
 		if (!ctx[key]) {
-			ctx[key] = flatten([_store(ctx, key, opts)])
+			ctx[key] = _store(ctx, key, opts)
 		}
-		return ctx[key] as [T, ...any[]]
+		const val = ctx[key]
+		return (
+			Array.isArray(val)
+			? val as [T, ...any[]]
+			: val as T
+		)
 	}
 }
 export function _ensure__store__instance<T>(
 	_store:(ctx?:any, key?:string|symbol, opts?:any)=>T,
-	key:string|symbol=Symbol(),
-):[(ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]], T, ...any[]] {
-  const ensure__store = _ensure__store<T>(_store, key)
-	const [val, ...rest] = ensure__store()
-	return [ensure__store, val, ...rest]
+	key?:string|symbol,
+):[
+	(ctx?:any, opts?:any)=>T,
+	T,
+];
+export function _ensure__store__instance<T>(
+	_store:(ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]],
+	key?:string|symbol,
+):[
+	(ctx?:any, opts?:any)=>[T, ...any[]],
+	T,
+	...any[],
+];
+export function _ensure__store__instance<T>(
+	_store:(ctx?:any, key?:string|symbol, opts?:any)=>(T|[T, ...any[]]),
+	key:string|symbol = Symbol(),
+):[
+	(
+		((ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]])
+		|((ctx?:any, key?:string|symbol, opts?:any)=>T)
+		),
+	T,
+	...any[]
+] {
+	const ensure__store = _ensure__store<T>(
+		_store as (ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]],
+		key
+	)
+	const val = ensure__store()
+	return (
+		Array.isArray(val)
+		? [ensure__store, val[0] as T, ...val.slice(1)]
+		: [ensure__store, val as unknown as T]
+	)
 }
