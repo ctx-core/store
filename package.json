@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/store",
-	"version": "12.3.2",
+	"version": "12.3.3",
 	"description": "ctx-core store",
 	"main": "lib.js",
 	"module": "lib.js",
@@ -30,10 +30,10 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^15.5.0",
+		"@ctx-core/array": "^15.5.1",
 		"@ctx-core/combinators": "^4.2.13",
-		"@ctx-core/function": "^10.5.35",
-		"@ctx-core/object": "^6.3.10",
+		"@ctx-core/function": "^10.5.36",
+		"@ctx-core/object": "^6.3.11",
 		"svelte": "^3.16.5"
 	},
 	"devDependencies": {
