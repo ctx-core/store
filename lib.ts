@@ -249,65 +249,16 @@ export const ctx__global = {}
  * @param _store
  * @param key
  */
-export function _ensure__store<T>(
-	_store:(ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]],
-	key?:string|symbol,
-):(ctx?:any, opts?:any)=>[T, ...any[]];
-export function _ensure__store<T>(
+export function _def__store<T>(
+	key:string|symbol,
 	_store:(ctx?:any, key?:string|symbol, opts?:any)=>T,
-	key?:string|symbol,
-):(ctx?:any, opts?:any)=>T;
-export function _ensure__store<T>(
-	_store:(ctx?:any, key?:string|symbol, opts?:any)=>([T, ...any[]]|T),
-	key:string|symbol = Symbol(),
-):(ctx?:any, opts?:any)=>([T, ...any[]]|T) {
+):(ctx?:any, opts?:any)=>T {
 	return (ctx?, opts?)=>{
 		if (!ctx) ctx = ctx__global
 		if (!ctx[key]) {
 			ctx[key] = _store(ctx, key, opts)
 		}
-		const val = ctx[key]
-		return (
-			Array.isArray(val)
-			? val as [T, ...any[]]
-			: val as T
-		)
+		return ctx[key]
 	}
 }
-export function _ensure__store__instance<T>(
-	_store:(ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]],
-	key?:string|symbol,
-):[
-	(ctx?:any, opts?:any)=>[T, ...any[]],
-	T,
-	...any[],
-];
-export function _ensure__store__instance<T>(
-	_store:(ctx?:any, key?:string|symbol, opts?:any)=>T,
-	key?:string|symbol,
-):[
-	(ctx?:any, opts?:any)=>T,
-	T,
-];
-export function _ensure__store__instance<T>(
-	_store:(ctx?:any, key?:string|symbol, opts?:any)=>([T, ...any[]]|T),
-	key:string|symbol = Symbol(),
-):[
-	(
-		((ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]])
-		|((ctx?:any, key?:string|symbol, opts?:any)=>T)
-		),
-	T,
-	...any[]
-] {
-	const ensure__store = _ensure__store<T>(
-		_store as (ctx?:any, key?:string|symbol, opts?:any)=>[T, ...any[]],
-		key
-	)
-	const val = ensure__store()
-	return (
-		Array.isArray(val)
-		? [ensure__store, val[0] as T, ...val.slice(1)]
-		: [ensure__store, val as unknown as T]
-	)
-}
+export const _ensure__store = _def__store

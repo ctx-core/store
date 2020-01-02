@@ -114,7 +114,5 @@ export declare const ctx__global: {};
  * @param _store
  * @param key
  */
-export declare function _ensure__store<T>(_store: (ctx?: any, key?: string | symbol, opts?: any) => [T, ...any[]], key?: string | symbol): (ctx?: any, opts?: any) => [T, ...any[]];
-export declare function _ensure__store<T>(_store: (ctx?: any, key?: string | symbol, opts?: any) => T, key?: string | symbol): (ctx?: any, opts?: any) => T;
-export declare function _ensure__store__instance<T>(_store: (ctx?: any, key?: string | symbol, opts?: any) => [T, ...any[]], key?: string | symbol): [(ctx?: any, opts?: any) => [T, ...any[]], T, ...any[]];
-export declare function _ensure__store__instance<T>(_store: (ctx?: any, key?: string | symbol, opts?: any) => T, key?: string | symbol): [(ctx?: any, opts?: any) => T, T];
+export declare function _def__store<T>(key: string | symbol, _store: (ctx?: any, key?: string | symbol, opts?: any) => T): (ctx?: any, opts?: any) => T;
+export declare const _ensure__store: typeof _def__store;
