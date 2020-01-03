@@ -107,12 +107,3 @@ export declare function _set__val(val: any): (store: any) => any;
  * @returns {function(...[*]): void}
  */
 export declare function _set__store(store: any, __?: (x: any) => any): (...a1__arg: any[]) => any;
-export declare const ctx__global: {};
-/**
- * Returns a function to ensure that a store with a key is defined on a ctx object,
- * otherwise it creates the store using the _store factory function.
- * @param _store
- * @param key
- */
-export declare function _def__store<T>(key: string | symbol, _store: (ctx?: any, key?: string | symbol, opts?: any) => T): (ctx?: any, opts?: any) => T;
-export declare const _ensure__store: typeof _def__store;
