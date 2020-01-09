@@ -113,9 +113,14 @@ export function subscribe__multi(a1__store, fn) {
  * @returns {function(): Unsubscriber}
  */
 export function subscribe__debug(store, label) {
-	return subscribe(store, value=>{
-		console.debug(label, value)
-	})
+	try {
+		return subscribe(store, value=>{
+			console.debug(label, value)
+		})
+	} catch (err) {
+		console.error(label)
+		throw err
+	}
 }
 /**
  * Creates a Readable store that derives it's value from a async function.
