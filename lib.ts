@@ -118,7 +118,7 @@ export function subscribe__debug(store, label) {
 			console.debug(label, value)
 		})
 	} catch (err) {
-		console.error(label)
+		console.error(`Error: ${label}`)
 		throw err
 	}
 }
