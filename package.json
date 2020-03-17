@@ -34,7 +34,7 @@
 		"@ctx-core/combinators": "^4.2.14",
 		"@ctx-core/function": "^10.5.42",
 		"@ctx-core/object": "^8.0.4",
-		"svelte": "^3.19.2"
+		"svelte": "^3.20.1"
 	},
 	"devDependencies": {
 		"typescript": "^3.8.3"
