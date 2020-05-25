@@ -2,6 +2,7 @@
 	"name": "@ctx-core/store",
 	"version": "13.1.27",
 	"description": "ctx-core store",
+	"type": "module",
 	"main": "lib.js",
 	"module": "lib.js",
 	"types": "lib.ts",
