@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/store",
-	"version": "13.1.31",
+	"version": "13.1.32",
 	"description": "ctx-core store",
 	"main": "lib.js",
 	"module": "lib.js",
