@@ -10,6 +10,7 @@ import { _spread, each, map } from '@ctx-core/array'
 import { I } from '@ctx-core/combinators'
 import { call, _a1__wrap } from '@ctx-core/function'
 export type Stores = Readable<any>|[Readable<any>, ...Array<Readable<any>>];
+export type Unsubscriber = () => void;
 declare const Array
 /**
  * Asserts fn is a function then creates a derived stores

@@ -1,5 +1,6 @@
 import { Writable, Readable } from 'svelte/store';
 export declare type Stores = Readable<any> | [Readable<any>, ...Array<Readable<any>>];
+export declare type Unsubscriber = () => void;
 /**
  * Asserts fn is a function then creates a derived stores
  * @param {Stores} stores
