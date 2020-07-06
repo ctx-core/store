@@ -1,5 +1,5 @@
 import {
-	get,
+	get as get_,
 	writable,
 	readable,
 	derived as derived__store,
@@ -9,9 +9,13 @@ import {
 import { _spread, each, map } from '@ctx-core/array'
 import { I } from '@ctx-core/combinators'
 import { call, _a1__wrap } from '@ctx-core/function'
+export * from 'svelte/store'
 export type Stores = Readable<any>|[Readable<any>, ...Array<Readable<any>>];
 export type Unsubscriber = () => void;
 declare const Array
+export function get<T>(store) {
+	return get_(store) as T
+}
 /**
  * Asserts fn is a function then creates a derived stores
  * @param {Stores} stores
