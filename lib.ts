@@ -9,7 +9,12 @@ import {
 import { _spread, each, map } from '@ctx-core/array'
 import { I } from '@ctx-core/combinators'
 import { call, _a1__wrap } from '@ctx-core/function'
-export * from 'svelte/store'
+export {
+	writable,
+	readable,
+	Writable,
+	Readable,
+}
 export type Stores = Readable<any>|[Readable<any>, ...Array<Readable<any>>];
 export type Unsubscriber = () => void;
 declare const Array
