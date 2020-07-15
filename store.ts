@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store'
-import { subscribe } from './lib'
+import { subscribe } from './subscribe'
 import { _b } from '@ctx-core/object'
 declare const window
 export const b__ctx__store__global = _b('__ctx__store__global', ()=>{
