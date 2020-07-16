@@ -4,4 +4,4 @@
  * @param {function} fn
  * @returns {Unsubscriber}
  */
-export declare function subscribe__change__once(store: any, fn: any): () => void;
+export declare function subscribe__change__once<T>(store: any, fn: any): () => void;

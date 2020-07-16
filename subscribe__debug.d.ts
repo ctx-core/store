@@ -4,4 +4,4 @@
  * @param {string} label
  * @returns {function(): Unsubscriber}
  */
-export declare function subscribe__debug(store: any, label: any): () => void;
+export declare function subscribe__debug<T>(store: any, label: any): () => void;

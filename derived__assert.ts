@@ -1,4 +1,4 @@
-import { derived as derived__store } from 'svelte/store'
+import { derived as derived__svelte } from 'svelte/store'
 import { Stores } from './Stores'
 /**
  * Asserts fn is a function then creates a derived stores
@@ -12,5 +12,5 @@ export function derived__assert<S extends Stores, T>(stores, fn, initial_value?)
 		console.trace(message__error)
 		throw message__error
 	}
-	return derived__store<S, T>(stores, fn, initial_value)
+	return derived__svelte<S, T>(stores, fn, initial_value)
 }

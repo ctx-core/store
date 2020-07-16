@@ -4,6 +4,6 @@ import { set } from './set'
  * @param val
  * @returns {function(Writable): void}
  */
-export function _set__val(val) {
-	return store=>set(store, val)
+export function _set__val<T>(val) {
+	return store=>set<T>(store, val)
 }

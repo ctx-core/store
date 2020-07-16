@@ -4,4 +4,4 @@
  * @param {function} fn
  * @returns {function: void}
  */
-export declare function subscribe__noinit(store: any, fn: any): () => void;
+export declare function subscribe__noinit<T>(store: any, fn: any): () => void;

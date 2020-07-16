@@ -5,9 +5,9 @@ import { subscribe } from './subscribe'
  * @param {string} label
  * @returns {function(): Unsubscriber}
  */
-export function subscribe__debug(store, label) {
+export function subscribe__debug<T>(store, label) {
 	try {
-		return subscribe(store, value=>{
+		return subscribe<T>(store, value=>{
 			console.debug(label, value)
 		})
 	} catch (err) {

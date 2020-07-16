@@ -4,6 +4,7 @@
  * @param val
  * @returns {void}
  */
-export function set(store, val) {
-	return store.set(val)
+import { Writable } from 'svelte/store'
+export function set<T>(store: Writable<T>, val) {
+	store.set(val)
 }

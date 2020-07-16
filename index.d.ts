@@ -17,5 +17,5 @@ export * from './subscribe__change__once';
 export * from './subscribe__debug';
 export * from './subscribe__multi';
 export * from './subscribe__noinit';
-export * from './subscribe__wait_for';
+export * from './wait_for__subscribe';
 export * from './Unsubscriber';

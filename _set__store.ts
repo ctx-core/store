@@ -7,9 +7,9 @@ import { set } from './set'
  * @param {Function|*} __ - function return value or value to set the given store
  * @returns {function(...[*]): void}
  */
-export function _set__store(store, __ = I) {
+export function _set__store<T>(store, __ = I) {
 	return (...a1__arg)=>
-		set(store,
+		set<T>(store,
 			typeof __ === 'function'
 				// @ts-ignore
 			? __.apply(__, a1__arg)

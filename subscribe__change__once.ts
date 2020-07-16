@@ -5,8 +5,8 @@ import { subscribe__noinit } from './subscribe__noinit'
  * @param {function} fn
  * @returns {Unsubscriber}
  */
-export function subscribe__change__once(store, fn) {
-	const unsubscribe = subscribe__noinit(store, (...a1__arg)=>{
+export function subscribe__change__once<T>(store, fn) {
+	const unsubscribe = subscribe__noinit<T>(store, (...a1__arg)=>{
 		// @ts-ignore
 		const __ = fn(...a1__arg)
 		unsubscribe()
