@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/store",
-	"version": "14.0.3",
+	"version": "15.0.0",
 	"description": "ctx-core store",
 	"main": "./index.js",
 	"module": "./index.js",
