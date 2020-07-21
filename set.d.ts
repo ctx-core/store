@@ -4,4 +4,5 @@
  * @param val
  * @returns {void}
  */
-export declare function set(store: any, val: any): any;
+import { Writable } from 'svelte/store';
+export declare function set<T>(store: Writable<T>, val: any): void;

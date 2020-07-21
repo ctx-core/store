@@ -5,4 +5,4 @@
  * @param {Function|*} __ - function return value or value to set the given store
  * @returns {function(...[*]): void}
  */
-export declare function _set__store(store: any, __?: (x: any) => any): (...a1__arg: any[]) => any;
+export declare function _set__store<T>(store: any, __?: (x: any) => any): (...a1__arg: any[]) => void;

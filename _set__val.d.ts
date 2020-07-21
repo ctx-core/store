@@ -3,4 +3,4 @@
  * @param val
  * @returns {function(Writable): void}
  */
-export declare function _set__val(val: any): (store: any) => any;
+export declare function _set__val<T>(val: any): (store: any) => void;
