@@ -3,8 +3,6 @@ export * from './_readable_set_a1';
 export * from './_set__store';
 export * from './_set__val';
 export * from './clear__store';
-export * from './derived';
-export * from './derived__assert';
 export * from './derived__async';
 export * from './derived__spread';
 export * from './get';
