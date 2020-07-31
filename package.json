@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/store",
-	"version": "16.0.8",
+	"version": "16.0.9",
 	"description": "ctx-core store",
 	"main": "./index.js",
 	"module": "./index.js",
@@ -30,10 +30,10 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@ctx-core/array": "^16.0.7",
+		"@ctx-core/array": "^16.0.8",
 		"@ctx-core/combinators": "^4.2.20",
 		"@ctx-core/function": "^13.1.2",
-		"@ctx-core/object": "^9.0.7",
+		"@ctx-core/object": "^9.0.8",
 		"svelte": "^3.24.0"
 	},
 	"devDependencies": {
