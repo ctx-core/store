@@ -1,10 +1,11 @@
 import { Readable } from 'svelte/store'
-import { subscribe } from './subscribe'
-export function wait_for__subscribe<T>(store: Readable<T>, condition_fn = val=>val) {
+export function wait_for__subscribe<T>(store: Readable<T>, condition_fn: (T)=>any = (val:T)=>val) {
 	return new Promise<T>(resolve=>{
-		const unsubscribe = subscribe<T>(store, (val:T)=>{
+		let unsubscribe: () => void
+		unsubscribe = store.subscribe((val:T)=>{
 			if (condition_fn(val)) {
-				setTimeout(() => unsubscribe())
+				if (unsubscribe) unsubscribe();
+				else setTimeout(() => unsubscribe())
 				resolve(val)
 			}
 		})
