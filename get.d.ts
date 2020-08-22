@@ -1,1 +1,1 @@
-export declare function get<T>(store: any): T;
+export declare function get<T = unknown>(store: any): T;
