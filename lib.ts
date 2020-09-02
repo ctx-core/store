@@ -4,4 +4,3 @@ import {
 export {
 	derived, writable, readable, Writable, Readable,
 }
-
