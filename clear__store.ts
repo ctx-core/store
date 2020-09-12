@@ -1,7 +1,7 @@
 import { _wrap_a1 } from '@ctx-core/function'
 import { each } from '@ctx-core/array'
 import { _set__val } from './_set__val'
-import { Stores } from './Stores'
+import type { Stores } from './Stores'
 /**
  * Sets each nowrap__a1__store with val
  * @param {Stores} stores

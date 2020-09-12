@@ -1,4 +1,4 @@
-import { Readable } from 'svelte/store'
+import type { Readable } from 'svelte/store'
 /**
  * Delegates to store.subscribe
  * @param {Readable} store

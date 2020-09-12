@@ -1,4 +1,4 @@
-import { Stores } from './Stores';
+import type { Stores } from './Stores';
 /**
  * Returns a function that [clear__store](#clear__store).
  * @param {Stores} stores
