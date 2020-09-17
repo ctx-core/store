@@ -6,10 +6,10 @@ import type { Readable } from 'svelte/store'
  * @param {function} [invalidate]
  * @returns {Unsubscriber}
  */
-export function subscribe<T>(
-	store:Readable<T>,
-	run:(T)=>void,
-	invalidate?:(T)=>void
+export function subscribe<I = unknown>(
+	store:Readable<I>,
+	run:(I)=>void,
+	invalidate?:(I)=>void
 ) {
 	return store.subscribe(run, invalidate)
 }

@@ -2,27 +2,28 @@ import { each, map } from '@ctx-core/array'
 import { call } from '@ctx-core/function'
 import { get } from './get'
 import { subscribe } from './subscribe'
+import type { Readable } from './lib'
 /**
  * Subscribes to multiple stores. The subscriber fn is called when any of the store_a1 changes.
- * @param {Readable[]} store_a1
- * @param {function} fn
- * @returns {Unsubscriber}
  */
-export function subscribe__multi(store_a1, fn) {
-	const a1__unsubscribe =
+export function subscribe__multi<I = unknown>(
+	store_a1:Readable<I>[],
+	fn:((store_a1:Readable<I>[])=>void)
+) {
+	const unsubscribe_a1 =
 		map(store_a1,
-			(store, i)=>subscribe(store,
+			(store, i)=>subscribe<I>(store,
 				$store=>invoke($store, i)
 			))
-	return ()=>each(a1__unsubscribe, call)
-	function invoke($store__i, i) {
-		const a1__$store__all =
+	return ()=>each(unsubscribe_a1, call)
+	function invoke($i_store, i) {
+		const all_$store_a1 =
 			map(store_a1,
 				(store, j)=>
 					(j === i)
-					? $store__i
+					? $i_store
 					: get(store)
 			)
-		fn(a1__$store__all)
+		fn(all_$store_a1)
 	}
 }

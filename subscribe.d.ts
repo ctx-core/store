@@ -6,4 +6,4 @@ import type { Readable } from 'svelte/store';
  * @param {function} [invalidate]
  * @returns {Unsubscriber}
  */
-export declare function subscribe<T>(store: Readable<T>, run: (T: any) => void, invalidate?: (T: any) => void): () => void;
+export declare function subscribe<I = unknown>(store: Readable<I>, run: (I: any) => void, invalidate?: (I: any) => void): () => void;
