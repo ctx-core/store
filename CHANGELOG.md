@@ -1,6 +1,18 @@
 # @ctx-core/store
 
+## 16.2.11
+
+### Patch Changes
+
+- fix: npm run compile: path to tsc
+- Updated dependencies [undefined]
+  - @ctx-core/array@18.0.1
+  - @ctx-core/combinators@4.2.27
+  - @ctx-core/function@15.0.1
+  - @ctx-core/object@11.0.1
+
 ## 16.2.10
+
 ### Patch Changes
 
 - typescript updates

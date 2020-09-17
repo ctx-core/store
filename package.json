@@ -1,6 +1,6 @@
 {
   "name": "@ctx-core/store",
-  "version": "16.2.10",
+  "version": "16.2.11",
   "description": "ctx-core store",
   "keywords": [
     "ctx-core",
@@ -22,7 +22,7 @@
   "scripts": {
     "build": "npm run clean && npm run compile",
     "clean": "rm -f tsconfig.tsbuildinfo",
-    "compile": "tsc -b",
+    "compile": "./node_modules/.bin/tsc -b",
     "exec": "$@",
     "prepublishOnly": "npm run compile"
   },
