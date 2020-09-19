@@ -9,14 +9,14 @@ import { subscribe } from './subscribe'
  * @returns {Readable}
  * @see derived__store
  */
-export function derived__async(stores, fn, initial_value = null) {
+export function derived__async<I>(stores, fn, initial_value = null) {
 	const single = !Array.isArray(stores)
 	if (single) stores = [stores]
 	const auto = fn.length < 2
 	let value = {}
 	return readable(initial_value, set=>{
 		let inited = false
-		const values = []
+		const values = [] as I[]
 		let pending = 0
 		// @ts-ignore
 		async function sync():Promise<void> {

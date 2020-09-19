@@ -7,12 +7,12 @@ import { subscribe } from './subscribe'
  */
 export function subscribe__noinit<T>(store, fn) {
 	let beyond_init = false
-	return subscribe<T>(store, (...a1__arg)=>{
+	return subscribe<T>(store, (...arg_a1)=>{
 		if (!beyond_init) {
 			beyond_init = true
 			return
 		}
 		// @ts-ignore
-		return fn(...a1__arg)
+		return fn(...arg_a1)
 	})
 }

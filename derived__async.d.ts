@@ -6,4 +6,4 @@
  * @returns {Readable}
  * @see derived__store
  */
-export declare function derived__async(stores: any, fn: any, initial_value?: any): import("svelte/store").Readable<any>;
+export declare function derived__async<I>(stores: any, fn: any, initial_value?: null): import("svelte/store").Readable<null>;

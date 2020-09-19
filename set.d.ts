@@ -5,4 +5,4 @@
  * @returns {void}
  */
 import type { Writable } from 'svelte/store';
-export declare function set<T>(store: Writable<T>, val: any): void;
+export declare function set<I>(store: Writable<I>, val: any): void;

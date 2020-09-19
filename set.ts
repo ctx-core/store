@@ -5,6 +5,6 @@
  * @returns {void}
  */
 import type { Writable } from 'svelte/store'
-export function set<T>(store: Writable<T>, val) {
+export function set<I>(store: Writable<I>, val) {
 	store.set(val)
 }

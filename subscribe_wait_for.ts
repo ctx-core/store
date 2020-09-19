@@ -1,8 +1,8 @@
 import type { Readable } from 'svelte/store'
-export function subscribe_wait_for<T>(store:Readable<T>, condition_fn:(T)=>any = (val:T)=>val) {
-	return new Promise<T>(resolve=>{
-		let unsubscribe:()=>void, unsubscribe_oninit:boolean
-		unsubscribe = store.subscribe((val:T)=>{
+export function subscribe_wait_for<I>(store:Readable<I>, condition_fn = (val:I)=>val) {
+	return new Promise<I>(resolve=>{
+		let unsubscribe:()=>void, unsubscribe_oninit = false
+		unsubscribe = store.subscribe((val:I)=>{
 			if (condition_fn(val)) {
 				if (unsubscribe) unsubscribe()
 				else unsubscribe_oninit = true
