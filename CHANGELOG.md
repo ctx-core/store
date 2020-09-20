@@ -1,5 +1,13 @@
 # @ctx-core/store
 
+## 17.0.3
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/combinators@5.0.2
+  - @ctx-core/array@19.0.3
+
 ## 17.0.2
 
 ### Patch Changes
