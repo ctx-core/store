@@ -23,7 +23,8 @@
 		"outDir": ".",
 		"declarationDir": ".",
 		"lib": [
-			"dom"
+			"dom",
+			"ES2019"
 		],
 		"importsNotUsedAsValues": "error",
 		"strict": true

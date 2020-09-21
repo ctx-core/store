@@ -11,11 +11,11 @@ export function subscribe__multi<I>(
 	fn:((store_a1:Readable<I>[])=>void)
 ) {
 	const unsubscribe_a1 =
-		map<Readable<I>[], Unsubscriber[]>(store_a1,
+		map<Readable<I>, Unsubscriber>(store_a1,
 			(store, i)=>subscribe<I>(store,
 				$store=>invoke($store, i)
 			))
-	return ()=>each<Unsubscriber[]>(unsubscribe_a1, unsubscribe => unsubscribe())
+	return ()=>each<Unsubscriber>(unsubscribe_a1, unsubscribe => unsubscribe())
 	function invoke($i_store, i) {
 		const all_$store_a1 =
 			map(store_a1,

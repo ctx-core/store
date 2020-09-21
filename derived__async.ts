@@ -1,17 +1,16 @@
 import { readable } from 'svelte/store'
 import { each } from '@ctx-core/array'
 import { subscribe } from './subscribe'
+import type { Unsubscriber } from './Unsubscriber'
+import type { Stores } from './Stores'
+import type { Readable } from './lib'
 /**
  * Creates a Readable store that derives it's value from a async function.
- * @param {Stores} stores
- * @param {function:Promise} fn
- * @param initial_value
- * @returns {Readable}
  * @see derived__store
  */
-export function derived__async<I>(stores, fn, initial_value = null) {
-	const single = !Array.isArray(stores)
-	if (single) stores = [stores]
+export function derived__async<I>(in_stores:Stores<I>, fn, initial_value = null) {
+	const single = !Array.isArray(in_stores)
+	const stores = (single ? [in_stores] : in_stores) as Readable<I>[]
 	const auto = fn.length < 2
 	let value = {}
 	return readable(initial_value, set=>{
@@ -30,16 +29,16 @@ export function derived__async<I>(stores, fn, initial_value = null) {
 				value=>{
 					values[i] = value
 					pending &= ~(1 << i)
-					if (inited) sync()
+					if (inited) sync().then()
 				},
 				()=>{
 					pending |= (1 << i)
 				})
 		)
 		inited = true
-		sync()
+		sync().then()
 		return function stop() {
-			each(unsubscribers, unsubscribe=>unsubscribe())
+			each<Unsubscriber>(unsubscribers, unsubscribe=>unsubscribe())
 		}
 	})
 }
