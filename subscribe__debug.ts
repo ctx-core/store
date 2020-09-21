@@ -1,13 +1,13 @@
 import { subscribe } from './subscribe'
+import type { Readable } from './lib'
 /**
  * Logs (console.debug) changes to a store
- * @param {Readable} store
- * @param {string} label
- * @returns {function(): Unsubscriber}
  */
-export function subscribe__debug<T>(store, label) {
+export function subscribe__debug<I extends unknown>(
+	store: Readable<I>, label: string
+) {
 	try {
-		return subscribe<T>(store, value=>{
+		return subscribe<I>(store, value=>{
 			console.debug(label, value)
 		})
 	} catch (err) {

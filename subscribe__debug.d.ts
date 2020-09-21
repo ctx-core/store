@@ -1,7 +1,5 @@
+import type { Readable } from './lib';
 /**
  * Logs (console.debug) changes to a store
- * @param {Readable} store
- * @param {string} label
- * @returns {function(): Unsubscriber}
  */
-export declare function subscribe__debug<T>(store: any, label: any): () => void;
+export declare function subscribe__debug<I extends unknown>(store: Readable<I>, label: string): import("./Unsubscriber").Unsubscriber;

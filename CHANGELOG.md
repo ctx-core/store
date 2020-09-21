@@ -1,5 +1,13 @@
 # @ctx-core/store
 
+## 17.1.0
+
+### Minor Changes
+
+- - Invalidator, StartStopNotifier, Subscriber, Updater
+
+  More explicit generic types
+
 ## 17.0.8
 
 ### Patch Changes

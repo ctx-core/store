@@ -1,1 +1,1 @@
-export type Unsubscriber = ()=>void;
+export type Unsubscriber = () => void
