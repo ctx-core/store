@@ -1,5 +1,12 @@
 # @ctx-core/store
 
+## 17.0.6
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@19.0.6
+
 ## 17.0.5
 
 ### Patch Changes
