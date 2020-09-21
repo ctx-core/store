@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 17.1.1
+
+### Patch Changes
+
+- \_readable_set_a1_set_type<I extends unknown> uses Subscriber<I> instead of custom type
+
 ## 17.1.0
 
 ### Minor Changes
