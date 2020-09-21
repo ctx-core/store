@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 17.0.7
+
+### Patch Changes
+
+- fix: export type Readable, Writable: typescript issue with --isolated-modules
+
 ## 17.0.6
 
 ### Patch Changes
