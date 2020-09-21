@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 17.1.2
+
+### Patch Changes
+
+- fix: _readable_set_a1: explicitly setting store type to avoid any type being returned
+
 ## 17.1.1
 
 ### Patch Changes
