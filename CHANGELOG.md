@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 17.2.2
+
+### Patch Changes
+
+- @ctx-core/array@19.0.10
+
 ## 17.2.1
 
 ### Patch Changes
