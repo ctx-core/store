@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 17.2.0
+
+### Minor Changes
+
+- feat: \_readable_set_ctx
+
 ## 17.1.4
 
 ### Patch Changes

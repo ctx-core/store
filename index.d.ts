@@ -1,5 +1,6 @@
 export * from './_clear_store';
 export * from './_readable_set_a1';
+export * from './_readable_set_ctx';
 export * from './_set_store';
 export * from './clear_store';
 export * from './derived__async';
