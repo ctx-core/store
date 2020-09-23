@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 18.0.1
+
+### Patch Changes
+
+- multi_subscribe: setting type for fn argument array
+
 ## 18.0.0
 
 ### Major Changes

@@ -8,7 +8,7 @@ import type { Readable } from './lib'
  */
 export function multi_subscribe<I extends unknown>(
 	store_a1:Readable<I>[],
-	fn:((store_a1:I[])=>void)
+	fn:(($store_a1:I[])=>void)
 ) {
 	const unsubscribe_a1 =
 		map<Readable<I>, Unsubscriber>(store_a1,
@@ -23,8 +23,8 @@ export function multi_subscribe<I extends unknown>(
 				(store, j)=>
 					(j === i)
 					? $i_store
-					: get(store)
-			)
+					: get<I>(store)
+			) as I[]
 		fn(all_$store_a1)
 	}
 }
