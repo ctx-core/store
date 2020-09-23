@@ -1,11 +1,10 @@
 import { clear_store } from './clear_store'
-import type { writable_stores_val_type } from './writable_stores_val_type'
-import type { writable_stores_type } from './writable_stores_type'
+import type { Writable } from './lib'
 /**
  * Returns a function that [clear_store](#clear_store).
  */
-export function _clear_store<I extends writable_stores_type<unknown>>(
-	stores:I, value: writable_stores_val_type<I>
+export function _clear_store<I extends unknown>(
+	stores:Writable<I>|Writable<I>[], value: I
 ) {
 	return ()=>clear_store<I>(stores, value)
 }

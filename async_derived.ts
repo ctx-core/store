@@ -1,23 +1,26 @@
 import { readable } from 'svelte/store'
-import { each } from '@ctx-core/array'
+import { each, wrap_a1_type } from '@ctx-core/array'
 import { subscribe } from './subscribe'
 import type { Unsubscriber } from './Unsubscriber'
 import type { Stores } from './Stores'
-import type { Readable } from './lib'
 import type { Subscriber } from './Subscriber'
+import type { Readable } from './lib'
 /**
  * Creates a Readable store that derives it's value from a async function.
- * @see derived__store
+ * @see store_derived
  */
-export function derived__async<I extends unknown>(
+export function async_derived<I extends unknown>(
 	in_stores:Stores<I>,
-	fn: (values: I | I[], set: Subscriber<I>) => Promise<I>,
-	initial_value = null as I
+	fn:(
+		values:I|I[],
+		set:Subscriber<I>
+	)=>Promise<I>,
+	initial_value:I
 ) {
 	const single = !Array.isArray(in_stores)
-	const stores = (single ? [in_stores] : in_stores) as Readable<I>[]
+	const stores = (single ? [in_stores] : in_stores) as wrap_a1_type<I>
 	const auto = fn.length < 2
-	let value: I
+	let value:I
 	return readable(initial_value, set=>{
 		let inited = false
 		const values = [] as I[]
@@ -28,8 +31,8 @@ export function derived__async<I extends unknown>(
 			if (auto && (value !== (value = result))) set(result)
 		}
 		const unsubscribers = stores.map((store, i)=>
-			subscribe(
-				store,
+			subscribe<I>(
+				store as Readable<I>,
 				value=>{
 					values[i] = value
 					pending &= ~(1 << i)
@@ -46,3 +49,4 @@ export function derived__async<I extends unknown>(
 		}
 	})
 }
+export const derived__async = async_derived

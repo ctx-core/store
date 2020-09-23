@@ -3,7 +3,7 @@ import type { Readable } from './lib'
 /**
  * Subscribes the fn to store but does not have the initial call.
  */
-export function subscribe__noinit<I extends unknown>(
+export function noinit_subscribe<I extends unknown>(
 	store: Readable<I>, fn
 ) {
 	let beyond_init = false
@@ -15,3 +15,4 @@ export function subscribe__noinit<I extends unknown>(
 		return fn(...arg_a1)
 	})
 }
+export const subscribe__noinit = noinit_subscribe

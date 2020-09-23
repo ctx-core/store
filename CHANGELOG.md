@@ -1,5 +1,22 @@
 # @ctx-core/store
 
+## 18.0.0
+
+### Major Changes
+
+- clear_store,\_clear_store: generic takes an unknown instead of a Writable<unknown>
+
+### Minor Changes
+
+- feat: stores_infer_type
+- spread_derived aliased by derived\_\_spread
+- debug_subscribe aliased by subscribe\_\_debug
+- multi_subscribe aliased by subscribe\_\_multi
+- subscribe_noinit aliased by subscribe\_\_noinit
+- feat: async_derived aliased by derived\_\_async
+- feat: readable_infer_type
+- \_clear_store aliased by \_store**clear, clear_store aliased by store**clear
+
 ## 17.2.3
 
 ### Patch Changes

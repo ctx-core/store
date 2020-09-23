@@ -3,8 +3,8 @@ import type { Readable } from './lib'
 /**
  * Logs (console.debug) changes to a store
  */
-export function subscribe__debug<I extends unknown>(
-	store: Readable<I>, label: string
+export function debug_subscribe<I extends unknown>(
+	store:Readable<I>, label:string
 ) {
 	try {
 		return subscribe<I>(store, value=>{
@@ -15,3 +15,4 @@ export function subscribe__debug<I extends unknown>(
 		throw err
 	}
 }
+export const subscribe__debug = debug_subscribe
