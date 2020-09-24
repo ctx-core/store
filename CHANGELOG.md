@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 18.0.2
+
+### Patch Changes
+
+- fix: multi_subscribe: invalid type error with store_a1: accept an array of Readable<any>
+
 ## 18.0.1
 
 ### Patch Changes
