@@ -5,7 +5,7 @@ import type { Readable } from './lib'
 /**
  * Delegates to store.subscribe
  */
-export function subscribe<I extends unknown>(
+export function subscribe<I extends unknown = unknown>(
 	store:Readable<I>,
 	run:Subscriber<I>,
 	invalidate?:Invalidator<I>

@@ -4,7 +4,7 @@ import type { Unsubscriber } from './Unsubscriber'
 /**
  * Logs (console.debug) changes to a store
  */
-export function debug_subscribe<I extends unknown>(
+export function debug_subscribe<I extends unknown = unknown>(
 	store:Readable<I>, label:string
 ) {
 	try {

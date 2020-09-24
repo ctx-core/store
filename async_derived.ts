@@ -9,7 +9,7 @@ import type { Readable } from './lib'
  * Creates a Readable store that derives it's value from a async function.
  * @see store_derived
  */
-export function async_derived<I extends unknown>(
+export function async_derived<I extends unknown = unknown>(
 	in_stores:Stores<I>,
 	fn:(
 		values:I|I[],

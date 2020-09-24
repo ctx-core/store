@@ -1,5 +1,15 @@
 # @ctx-core/store
 
+## 18.1.3
+
+### Patch Changes
+
+- default generic types
+- Updated dependencies [undefined]
+  - @ctx-core/array@19.0.13
+  - @ctx-core/function@16.1.1
+  - @ctx-core/object@12.0.8
+
 ## 18.1.2
 
 ### Patch Changes
@@ -103,7 +113,7 @@
 
 ### Patch Changes
 
-- \_readable_set_a1_set_type<I extends unknown> uses Subscriber<I> instead of custom type
+- \_readable_set_a1_set_type<I extends unknown = unknown> uses Subscriber<I> instead of custom type
 
 ## 17.1.0
 

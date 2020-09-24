@@ -1,9 +1,10 @@
 import { subscribe } from './subscribe'
 import type { Readable } from './lib'
+import type { Unsubscriber } from './Unsubscriber'
 /**
  * Subscribes the fn to store but does not have the initial call.
  */
-export function noinit_subscribe<I extends unknown>(
+export function noinit_subscribe<I extends unknown = unknown>(
 	store: Readable<I>, fn
 ) {
 	let beyond_init = false
@@ -13,6 +14,6 @@ export function noinit_subscribe<I extends unknown>(
 			return
 		}
 		return fn(...arg_a1)
-	})
+	}) as Unsubscriber
 }
 export const subscribe__noinit = noinit_subscribe

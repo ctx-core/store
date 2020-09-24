@@ -4,7 +4,7 @@ import type { Subscriber } from './Subscriber'
 /**
  * Calls the given fn the next time the value of the store changes, then unsubscribes.
  */
-export function change_once_subscribe<I extends unknown>(
+export function change_once_subscribe<I extends unknown = unknown>(
 	store: Readable<I>, fn: Subscriber<I>
 ) {
 	const unsubscribe = noinit_subscribe<I>(store, (value=>{

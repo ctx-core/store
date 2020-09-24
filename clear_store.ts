@@ -4,7 +4,7 @@ import type { Writable } from './lib'
 /**
  * Sets each store with val
  */
-export function clear_store<I extends unknown>(
+export function clear_store<I extends unknown = unknown>(
 	stores:Writable<I>|Writable<I>[], val:I
 ) {
 	const store_a1 = _wrap_a1<Writable<I>>(stores)
