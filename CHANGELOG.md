@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 18.1.1
+
+### Patch Changes
+
+- c8839e951: fix: multi_subscribe: generic J defaults to Readable<any>
+
 ## 18.1.0
 
 ### Minor Changes
