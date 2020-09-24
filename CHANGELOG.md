@@ -1,5 +1,14 @@
 # @ctx-core/store
 
+## 18.1.2
+
+### Patch Changes
+
+- fix: inferred type issue
+- Updated dependencies [undefined]
+  - @ctx-core/object@12.0.7
+  - @ctx-core/array@19.0.12
+
 ## 18.1.1
 
 ### Patch Changes
