@@ -1,5 +1,12 @@
 # @ctx-core/store
 
+## 18.1.0
+
+### Minor Changes
+
+- set: second generic type to set the store type
+- multi_subscribe: second generic type for the stores base argument
+
 ## 18.0.2
 
 ### Patch Changes
