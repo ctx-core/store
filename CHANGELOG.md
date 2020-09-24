@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 18.1.5
+
+### Patch Changes
+
+- fix: subscribe_wait_for: condition_fn is expected to return a boolean
+
 ## 18.1.4
 
 ### Patch Changes
