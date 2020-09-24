@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 18.1.9
+
+### Patch Changes
+
+- svelte: 3.26.0 -> 3.27.0
+
 ## 18.1.8
 
 ### Patch Changes
