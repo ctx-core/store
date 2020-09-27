@@ -1,5 +1,18 @@
 # @ctx-core/store
 
+## 20.0.0
+
+### Major Changes
+
+- BREAKING CHANGE: ExtractReadableValue instead of extract_readable_val_type
+
+### Minor Changes
+
+- StoresValues: copy & export of svelte's StoresValues type
+- ExtractStoresValues: StoreValues that supports intersection types: Extract Readable<unknown>
+- ExtractReadableValue: generics argument E: else type
+- feat: derived: fn values infers intersection types: using ExtractStoresValues
+
 ## 19.0.0
 
 ### Major Changes
@@ -8,7 +21,7 @@
 
 ### Minor Changes
 
-- feat: extract_readable_val_type
+- feat: ExtractReadableValue
 
 ## 18.1.12
 
