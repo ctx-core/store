@@ -1,6 +1,6 @@
 import { _wrap_a1 } from '@ctx-core/function'
 import { each } from '@ctx-core/array'
-import type { Writable } from './lib'
+import type { Writable } from './writable'
 /**
  * Sets each store with val
  */

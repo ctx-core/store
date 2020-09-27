@@ -1,5 +1,5 @@
 import { clear_store } from './clear_store'
-import type { Writable } from './lib'
+import type { Writable } from './writable'
 /**
  * Returns a function that [clear_store](#clear_store).
  */

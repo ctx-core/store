@@ -1,4 +1,4 @@
-import type { Readable } from './lib';
+import type { Readable } from './readable';
 import type { Unsubscriber } from './Unsubscriber';
 /**
  * Logs (console.debug) changes to a store

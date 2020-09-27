@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 21.0.0
+
+### Major Changes
+
+- extracted readable,writable modules from lib
+
 ## 20.1.0
 
 ### Minor Changes

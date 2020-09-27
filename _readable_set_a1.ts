@@ -1,4 +1,4 @@
-import { Readable, readable } from './lib'
+import { Readable, readable } from './readable'
 import { get } from './get'
 import type { maybe_undefined } from '@ctx-core/function'
 import type { StartStopNotifier } from './StartStopNotifier'

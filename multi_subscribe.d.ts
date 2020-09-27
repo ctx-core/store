@@ -1,5 +1,5 @@
 import type { Unsubscriber } from './Unsubscriber';
-import type { Readable } from './lib';
+import type { Readable } from './readable';
 /**
  * Subscribes to multiple stores. The subscriber fn is called when any of the store_a1 changes.
  */

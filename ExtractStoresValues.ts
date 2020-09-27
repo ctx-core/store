@@ -1,5 +1,5 @@
 import type { Stores } from './Stores'
-import type { Readable } from './lib'
+import type { Readable } from './readable'
 export type ExtractStoresValues<I extends Stores, E extends unknown = unknown> =
   I extends (Readable<infer O>)
     ? O

@@ -1,4 +1,4 @@
-import type { Readable } from './lib';
+import type { Readable } from './readable';
 import type { Unsubscriber } from './Unsubscriber';
 /**
  * Subscribes the fn to store but does not have the initial call.

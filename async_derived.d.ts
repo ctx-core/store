@@ -1,6 +1,6 @@
 import type { Stores } from './Stores';
 import type { Subscriber } from './Subscriber';
-import type { Readable } from './lib';
+import type { Readable } from './readable';
 /**
  * Creates a Readable store that derives it's value from a async function.
  * @see store_derived

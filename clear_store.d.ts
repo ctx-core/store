@@ -1,4 +1,4 @@
-import type { Writable } from './lib';
+import type { Writable } from './writable';
 /**
  * Sets each store with val
  */

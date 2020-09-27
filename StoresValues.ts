@@ -1,4 +1,4 @@
-import type { Readable } from './lib'
+import type { Readable } from './readable'
 export type StoresValues<T> =
   T extends Readable<infer U>
     ? U

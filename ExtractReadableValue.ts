@@ -1,4 +1,4 @@
-import type { Readable } from './lib'
+import type { Readable } from './readable'
 export type ExtractReadableValue<I extends Readable<unknown>, E extends unknown = unknown> =
 	I extends (Readable<infer O>)
 	? O

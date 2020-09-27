@@ -1,7 +1,7 @@
 import type { Subscriber } from './Subscriber'
 import type { Invalidator } from './Invalidator'
 import type { Unsubscriber } from './Unsubscriber'
-import type { Readable } from './lib'
+import type { Readable } from './readable'
 /**
  * Delegates to store.subscribe
  */

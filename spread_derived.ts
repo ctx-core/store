@@ -1,4 +1,4 @@
-import type { Readable } from './lib'
+import type { Readable } from './readable'
 import type { Stores } from './Stores'
 import { _spread } from '@ctx-core/array'
 import { derived } from './derived'
