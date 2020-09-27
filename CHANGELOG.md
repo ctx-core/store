@@ -1,5 +1,15 @@
 # @ctx-core/store
 
+## 20.1.0
+
+### Minor Changes
+
+- derived_in_fn_type, derived_return_in_fn_type, derived_set_in_fn_type, set_derived_type
+
+### Patch Changes
+
+- fix: derived: type inference when the setter fn has an arity of 1 with the return value setting the derived store
+
 ## 20.0.2
 
 ### Patch Changes

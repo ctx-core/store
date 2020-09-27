@@ -1,6 +1,11 @@
 import type { Stores } from './Stores';
 import type { ExtractStoresValues } from './ExtractStoresValues';
 import type { Unsubscriber } from './Unsubscriber';
-import type { Readable } from './lib';
+import type { StoresValues } from './StoresValues';
+import type { Readable } from 'svelte/types/runtime/store';
 export declare function derived<S extends Stores, O>(stores: S, in_fn: derived_in_fn_type<S, O>, initial_value?: O): Readable<O>;
-export declare type derived_in_fn_type<S extends Stores, O> = (values: ExtractStoresValues<S>, set: (value: O) => void) => Unsubscriber | void;
+export declare type derived_in_fn_type<S extends Stores, O> = (values: ExtractStoresValues<S>, set?: (value: O) => void) => O | Unsubscriber | void;
+export declare type derived_return_in_fn_type<S extends Stores, O> = (values: ExtractStoresValues<S>) => O;
+export declare type derived_set_in_fn_type<S extends Stores, O> = (values: ExtractStoresValues<S>, set: (value: O) => void) => Unsubscriber | void;
+export declare type return_derived_type<S extends Stores, O> = (stores: S, fn: (values: StoresValues<S>) => O) => Readable<O>;
+export declare type set_derived_type<S extends Stores, O> = (stores: S, fn: (values: StoresValues<S>, set: (value: O) => void) => Unsubscriber | void, initial_value?: O) => Readable<O>;
