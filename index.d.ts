@@ -6,6 +6,7 @@ export * from './async_derived';
 export * from './change_once_subscribe';
 export * from './clear_store';
 export * from './debug_subscribe';
+export * from './extract_readable_val_type';
 export * from './spread_derived';
 export * from './get';
 export * from './Invalidator';

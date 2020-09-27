@@ -1,5 +1,15 @@
 # @ctx-core/store
 
+## 19.0.0
+
+### Major Changes
+
+- get: generic I extends Readable<unknown>: the value type is inferred from I
+
+### Minor Changes
+
+- feat: extract_readable_val_type
+
 ## 18.1.12
 
 ### Patch Changes

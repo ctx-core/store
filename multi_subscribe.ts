@@ -23,7 +23,7 @@ export function multi_subscribe<I extends unknown, J extends Readable<any> = Rea
 				(store, j)=>
 					(j === i)
 					? $i_store
-					: get<I>(store)
+					: get(store)
 			) as I[]
 		fn(all_$store_a1)
 	}
