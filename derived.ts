@@ -6,7 +6,7 @@ import type { StoresValues } from './StoresValues'
 import type { Readable } from './lib'
 export function derived<S extends Stores, O>(
 	stores:S,
-	in_fn:(values:ExtractStoresValues<S>, set:(value:O)=>void)=>Unsubscriber|void,
+	in_fn:derived_in_fn_type<S, O>,
 	initial_value?:O
 ) {
 	const fn = (values:StoresValues<S>, set:(value:O)=>void)=>{
@@ -14,3 +14,5 @@ export function derived<S extends Stores, O>(
 	}
 	return in_derived(stores, fn, initial_value) as Readable<O>
 }
+export type derived_in_fn_type<S extends Stores, O> =
+	(values:ExtractStoresValues<S>, set:(value:O)=>void)=>Unsubscriber|void

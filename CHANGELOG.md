@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 20.0.2
+
+### Patch Changes
+
+- derived_in_fn_type
+
 ## 20.0.1
 
 ### Patch Changes
