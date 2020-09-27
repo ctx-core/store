@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 20.0.1
+
+### Patch Changes
+
+- fix: index: exports derived, readable_stores_val_type, StoresValues
+
 ## 20.0.0
 
 ### Major Changes
