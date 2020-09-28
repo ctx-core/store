@@ -1,16 +1,16 @@
 import type { Readable } from 'svelte/store'
-import type { readable_infer_type } from './readable_infer_type'
+import type { ExtractReadableValue } from './ExtractReadableValue'
 export function subscribe_wait_for<S extends Readable<unknown>>(
 	store:S,
-	condition_fn = (val:readable_infer_type<S>)=>!!val
+	condition_fn = (val:ExtractReadableValue<S>)=>!!val
 ) {
-	return new Promise<readable_infer_type<S>>(resolve=>{
+	return new Promise<ExtractReadableValue<S>>(resolve=>{
 		let unsubscribe:()=>void, unsubscribe_oninit = false
 		unsubscribe = store.subscribe(val=>{
-			if (condition_fn(val as readable_infer_type<S>)) {
+			if (condition_fn(val as ExtractReadableValue<S>)) {
 				if (unsubscribe) unsubscribe()
 				else unsubscribe_oninit = true
-				resolve(val as readable_infer_type<S>)
+				resolve(val as ExtractReadableValue<S>)
 			}
 		})
 		if (unsubscribe_oninit) unsubscribe()

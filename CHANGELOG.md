@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 23.0.1
+
+### Patch Changes
+
+- fix: subscribe_wait_for: type inference for intersection types
+
 ## 23.0.0
 
 ### Major Changes
