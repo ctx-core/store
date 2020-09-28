@@ -1,5 +1,33 @@
 # @ctx-core/store
 
+## 23.0.0
+
+### Major Changes
+
+- BREAKING CHANGE: subscribe_wait_for: generic S extends Readable<unknown> instead of representing value type
+
+### Minor Changes
+
+- feat: subscribe_wait_for: return type inferred by Readable store argument
+
+### Patch Changes
+
+- fix: readable_infer_type
+
+## 22.0.0
+
+### Major Changes
+
+- BREAKING CHANGE: subscribe_wait_for: generic S extends Readable<unknown> instead of representing value type
+
+### Minor Changes
+
+- feat: subscribe_wait_for: return type inferred by Readable store argument
+
+### Patch Changes
+
+- fix: readable_infer_type
+
 ## 21.1.0
 
 ### Minor Changes
