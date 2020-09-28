@@ -41,8 +41,7 @@ export type derived_set_in_fn_type<S extends Stores, O> =
 export type return_derived_type<S extends Stores, O> =
 	(
 		stores:S,
-		fn:(values:StoresValues<S>
-		)=>O
+		fn:(values:StoresValues<S>)=>O
 	)=>Readable<O>
 export type set_derived_type<S extends Stores, O> =
 	(
