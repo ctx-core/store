@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 21.1.0
+
+### Minor Changes
+
+- feat: WritableOrReadable
+
 ## 21.0.1
 
 ### Patch Changes

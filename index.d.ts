@@ -31,3 +31,4 @@ export * from './Updater';
 export * from './writable';
 export * from './writable_stores_type';
 export * from './writable_stores_val_type';
+export * from './WritableOrReadable';
