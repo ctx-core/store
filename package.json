@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/store",
-	"version": "23.0.1",
+	"version": "23.0.2",
 	"description": "ctx-core store",
 	"keywords": [
 		"ctx-core",
@@ -31,7 +31,7 @@
 		"@ctx-core/combinators": "workspace:^5.0.2",
 		"@ctx-core/function": "workspace:^16.1.1",
 		"@ctx-core/object": "workspace:^13.0.0",
-		"svelte": "3.28.0"
+		"svelte": "3.29.0"
 	},
 	"devDependencies": {
 		"typescript": "^4.0.3"
