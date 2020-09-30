@@ -1,5 +1,13 @@
 # @ctx-core/store
 
+## 23.0.4
+
+### Patch Changes
+
+- fix: derived: Maximum call stack size exceeded issue: referencing svelte/store derived
+- Updated dependencies [undefined]
+  - @ctx-core/store@23.0.4
+
 ## 23.0.3
 
 ### Patch Changes

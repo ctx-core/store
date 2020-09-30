@@ -3,7 +3,7 @@ import type { Stores } from './Stores';
 import type { ExtractStoresValues } from './ExtractStoresValues';
 import type { Unsubscriber } from './Unsubscriber';
 import type { StoresValues } from './StoresValues';
-export declare function derived<S extends Stores, O>(stores: S, in_fn: derived_in_fn_type<S, O>, initial_value?: O): any;
+export declare function derived<S extends Stores, O>(stores: S, in_fn: derived_in_fn_type<S, O>, initial_value?: O): Readable<O>;
 export declare type derived_in_fn_type<S extends Stores, O> = (values: ExtractStoresValues<S>, set: (value: O) => void) => O | Unsubscriber | void;
 export declare type derived_out_fn_type<S extends Stores, O> = (values: ExtractStoresValues<S>, set?: (value: O) => void) => O | Unsubscriber | void;
 export declare type derived_return_in_fn_type<S extends Stores, O> = (values: ExtractStoresValues<S>) => O;

@@ -1,4 +1,4 @@
-import { derived as in_derived } from './derived'
+import { derived as in_derived } from 'svelte/store'
 import type { Readable } from './readable'
 import type { Stores } from './Stores'
 import type { ExtractStoresValues } from './ExtractStoresValues'
