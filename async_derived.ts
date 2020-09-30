@@ -1,4 +1,4 @@
-import { readable } from 'svelte/store'
+import { readable } from '@ctx-core/store'
 import { each, wrap_a1_type } from '@ctx-core/array'
 import { subscribe } from './subscribe'
 import type { Unsubscriber } from './Unsubscriber'

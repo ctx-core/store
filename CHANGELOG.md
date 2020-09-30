@@ -1,5 +1,15 @@
 # @ctx-core/store
 
+## 23.0.3
+
+### Patch Changes
+
+- fix: derived: in_fn: inferred set function
+- fix: tsc build issues
+- Updated dependencies [undefined]
+- Updated dependencies [undefined]
+  - @ctx-core/store@23.0.3
+
 ## 23.0.2
 
 ### Patch Changes
