@@ -1,5 +1,13 @@
 # @ctx-core/store
 
+## 23.0.7
+
+### Patch Changes
+
+- fix: get: one generic param instead of two: updated to svelte api
+- Updated dependencies [undefined]
+  - @ctx-core/store@23.0.7
+
 ## 23.0.6
 
 ### Patch Changes
