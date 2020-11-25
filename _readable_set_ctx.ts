@@ -15,7 +15,7 @@ export function _readable_set_ctx<I extends unknown = unknown>(initial) {
 	} as readable_set_ctx_type<I>
 }
 export type _readable_set_ctx_set_type<I extends unknown = unknown> = Subscriber<I>
-export type readable_set_ctx_type<I extends unknown = unknown> = {
-	store: Readable<I>
-	set: _readable_set_ctx_set_type<I>
+export interface readable_set_ctx_type<I extends unknown = unknown> {
+	store:Readable<I>
+	set:_readable_set_ctx_set_type<I>
 }
