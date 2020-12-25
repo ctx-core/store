@@ -1,5 +1,19 @@
 # @ctx-core/store
 
+## 23.1.15
+
+### Patch Changes
+
+- - .rush
+- Updated dependencies [undefined]
+- Updated dependencies [undefined]
+- Updated dependencies [undefined]
+  - @ctx-core/function@16.4.0
+  - @ctx-core/array@19.1.13
+  - @ctx-core/combinators@5.0.6
+  - @ctx-core/object@15.0.10
+  - @ctx-core/store@23.1.15
+
 ## 23.1.14
 
 ### Patch Changes
