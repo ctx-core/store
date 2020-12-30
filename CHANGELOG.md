@@ -1,5 +1,15 @@
 # @ctx-core/store
 
+## 23.1.20
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/function@16.8.0
+  - @ctx-core/array@19.1.18
+  - @ctx-core/object@15.0.15
+  - @ctx-core/store@23.1.20
+
 ## 23.1.19
 
 ### Patch Changes
