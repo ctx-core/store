@@ -1,5 +1,13 @@
 # @ctx-core/store
 
+## 23.1.25
+
+### Patch Changes
+
+- svelte: 3.31.1 -> 3.31.2
+- Updated dependencies [undefined]
+  - @ctx-core/store@23.1.25
+
 ## 23.1.24
 
 ### Patch Changes
