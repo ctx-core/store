@@ -25,6 +25,7 @@ export * from './stores_infer_type';
 export * from './StoresValues';
 export * from './subscribe';
 export * from './subscribe_wait_for';
+export * from './subscribe_wait_for_timeout';
 export * from './Subscriber';
 export * from './Unsubscriber';
 export * from './Updater';

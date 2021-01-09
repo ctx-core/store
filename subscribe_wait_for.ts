@@ -16,4 +16,6 @@ export function subscribe_wait_for<S extends Readable<unknown>>(
 		if (unsubscribe_oninit) unsubscribe()
 	})
 }
-export const wait_for__subscribe = subscribe_wait_for
+export {
+	subscribe_wait_for as wait_for__subscribe
+}
