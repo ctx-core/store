@@ -1,5 +1,18 @@
 # @ctx-core/store
 
+## 23.3.0
+
+### Minor Changes
+
+- subscribe_wait as subscribe_wait_for
+- subscribe_wait_timeout as subscribe_wait_for_timeout
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+- Updated dependencies [undefined]
+  - @ctx-core/store@23.3.0
+
 ## 23.2.1
 
 ### Patch Changes

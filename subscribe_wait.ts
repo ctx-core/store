@@ -1,6 +1,6 @@
 import type { Readable } from 'svelte/store'
 import type { ExtractReadableValue } from './ExtractReadableValue'
-export function subscribe_wait_for<S extends Readable<unknown>>(
+export function subscribe_wait<S extends Readable<unknown>>(
 	store:S,
 	condition_fn = (val:ExtractReadableValue<S>)=>!!val
 ) {
@@ -17,5 +17,6 @@ export function subscribe_wait_for<S extends Readable<unknown>>(
 	})
 }
 export {
-	subscribe_wait_for as wait_for__subscribe
+	subscribe_wait as subscribe_wait_for,
+	subscribe_wait as wait_for__subscribe
 }
