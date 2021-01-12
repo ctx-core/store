@@ -3,4 +3,4 @@
  * This is useful in conjunction with [subscribe](#subscribe).
  */
 export declare function _set_store<I extends unknown = unknown>(store: any, setter?: (v: I) => I): (val: I) => void;
-export declare const _set__store: typeof _set_store;
+export { _set_store as _set__store };

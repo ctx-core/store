@@ -16,4 +16,4 @@ export function noinit_subscribe<I extends unknown = unknown>(
 		return fn(...arg_a1)
 	}) as Unsubscriber
 }
-export const subscribe__noinit = noinit_subscribe
+export { noinit_subscribe as subscribe__noinit }

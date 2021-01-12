@@ -48,4 +48,4 @@ export function async_derived<I extends unknown = unknown>(
 		}
 	})
 }
-export const derived__async = async_derived
+export { async_derived as derived__async }

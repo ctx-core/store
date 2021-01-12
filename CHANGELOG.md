@@ -1,5 +1,13 @@
 # @ctx-core/store
 
+## 23.3.3
+
+### Patch Changes
+
+- export alias changes
+- Updated dependencies [undefined]
+  - @ctx-core/store@23.3.3
+
 ## 23.3.2
 
 ### Patch Changes

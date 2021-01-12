@@ -7,4 +7,4 @@ export function spread_derived<I extends Stores<unknown>, O extends unknown>(
 ) {
 	return derived<I, O>(stores, _spread(fn), initial_value) as Readable<O>
 }
-export const derived__spread = spread_derived
+export { spread_derived as derived__spread }

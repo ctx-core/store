@@ -28,4 +28,4 @@ export function multi_subscribe<I extends unknown, J extends Readable<any> = Rea
 		fn(all_$store_a1)
 	}
 }
-export const subscribe__multi = multi_subscribe
+export { multi_subscribe as subscribe__multi }

@@ -10,4 +10,4 @@ export function _set_store<I extends unknown = unknown>(store, setter = (v:I)=>v
 			? setter.call(setter, val)
 			: setter)
 }
-export const _set__store = _set_store
+export { _set_store as _set__store }
