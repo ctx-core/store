@@ -1,5 +1,16 @@
 # @ctx-core/store
 
+## 23.4.0
+
+### Minor Changes
+
+- StoreSequence_I: step,step_data,done
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/store@23.4.0
+
 ## 23.3.4
 
 ### Patch Changes
