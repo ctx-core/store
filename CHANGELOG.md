@@ -1,5 +1,13 @@
 # @ctx-core/store
 
+## 23.4.1
+
+### Patch Changes
+
+- fix: index: export StoreSequence_I
+- Updated dependencies [undefined]
+  - @ctx-core/store@23.4.1
+
 ## 23.4.0
 
 ### Minor Changes

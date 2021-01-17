@@ -22,6 +22,7 @@ export * from './set';
 export * from './StartStopNotifier';
 export * from './Stores';
 export * from './stores_infer_type';
+export * from './StoreSequence_I';
 export * from './StoresValues';
 export * from './subscribe';
 export * from './subscribe_wait';
