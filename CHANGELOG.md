@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 24.0.14
+
+### Patch Changes
+
+- svelte: 3.32.2 -> 3.32.3
+
 ## 24.0.13
 
 ### Patch Changes
