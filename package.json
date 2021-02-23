@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/store",
-	"version": "24.0.17",
+	"version": "24.0.18",
 	"description": "ctx-core store",
 	"keywords": [
 		"ctx-core",
@@ -29,8 +29,8 @@
 	"dependencies": {
 		"@ctx-core/array": "workspace:^20.1.11",
 		"@ctx-core/combinators": "workspace:^6.0.3",
-		"@ctx-core/function": "workspace:^17.3.4",
-		"@ctx-core/object": "workspace:^17.0.9",
+		"@ctx-core/function": "workspace:^17.3.5",
+		"@ctx-core/object": "workspace:^17.0.10",
 		"svelte": "3.32.3"
 	},
 	"devDependencies": {
