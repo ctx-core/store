@@ -4,54 +4,54 @@ import type { Stores } from './Stores'
 import type { ExtractStoresValues } from './ExtractStoresValues'
 import type { Unsubscriber } from './Unsubscriber'
 import type { StoresValues } from './StoresValues'
-export function derived<S extends Stores, O>(
-	stores:S,
-	in_fn:derived_in_fn_type<S, O>,
-	initial_value?:O
-) {
+export function derived<Store extends Stores, Val extends unknown = unknown>(
+	stores:Store,
+	in_fn:derived_in_fn_type<Store, Val>,
+	initial_value?:Val
+):Readable<Val> {
 	return (
 		in_fn.length === 1
-		? (in_derived as return_derived_type<S, O>)(
+		? (in_derived as return_derived_type<Store, Val>)(
 			stores,
-			((values:StoresValues<S>)=>{
-				return (in_fn as derived_out_fn_type<S, O>)(
-					values as ExtractStoresValues<S>
-				) as O
-			}) as derived_return_in_fn_type<S, O>
+			((values:StoresValues<Store>)=>{
+				return (in_fn as derived_out_fn_type<Store, Val>)(
+					values as ExtractStoresValues<Store>
+				) as Val
+			}) as derived_return_in_fn_type<Store, Val>
 		)
-		: (in_derived as set_derived_type<S, O>)(
+		: (in_derived as set_derived_type<Store, Val>)(
 			stores,
-			((values:StoresValues<S>, set:(value:O)=>void)=>{
-				return (in_fn as derived_out_fn_type<S, O>)(
-					values as ExtractStoresValues<S>, set
+			((values:StoresValues<Store>, set:(value:Val)=>void)=>{
+				return (in_fn as derived_out_fn_type<Store, Val>)(
+					values as ExtractStoresValues<Store>, set
 				) as Unsubscriber|void
-			}) as derived_set_in_fn_type<S, O>,
+			}) as derived_set_in_fn_type<Store, Val>,
 			initial_value
 		)
 	)
 }
-export type derived_in_fn_type<S extends Stores, O> = (
-	values:ExtractStoresValues<S>, set:(value:O)=>void
-)=>O|Unsubscriber|void
-export type derived_out_fn_type<S extends Stores, O> = (
-	values:ExtractStoresValues<S>, set?:(value:O)=>void
-)=>O|Unsubscriber|void
-export type derived_return_in_fn_type<S extends Stores, O> = (
-	values:ExtractStoresValues<S>
-)=>O
-export type derived_set_in_fn_type<S extends Stores, O> =
-	(values:ExtractStoresValues<S>, set:(value:O)=>void)=>Unsubscriber|void
-export type return_derived_type<S extends Stores, O> =
+export type derived_in_fn_type<Store extends Stores, Val extends unknown = unknown> = (
+	values:ExtractStoresValues<Store>, set:(value:Val)=>void
+)=>Val|Unsubscriber|void
+export type derived_out_fn_type<Store extends Stores, Val extends unknown = unknown> = (
+	values:ExtractStoresValues<Store>, set?:(value:Val)=>void
+)=>Val|Unsubscriber|void
+export type derived_return_in_fn_type<Store extends Stores, Val extends unknown = unknown> = (
+	values:ExtractStoresValues<Store>
+)=>Val
+export type derived_set_in_fn_type<Store extends Stores, Val extends unknown = unknown> =
+	(values:ExtractStoresValues<Store>, set:(value:Val)=>void)=>Unsubscriber|void
+export type return_derived_type<Store extends Stores, Val extends unknown = unknown> =
 	(
-		stores:S,
-		fn:(values:StoresValues<S>)=>O
-	)=>Readable<O>
-export type set_derived_type<S extends Stores, O> =
+		stores:Store,
+		fn:(values:StoresValues<Store>)=>Val
+	)=>Readable<Val>
+export type set_derived_type<Store extends Stores, Val extends unknown = unknown> =
 	(
-		stores:S,
+		stores:Store,
 		fn:(
-			values:StoresValues<S>,
-			set:(value:O)=>void
+			values:StoresValues<Store>,
+			set:(value:Val)=>void
 		)=>Unsubscriber|void,
-		initial_value?:O
-	)=>Readable<O>
+		initial_value?:Val
+	)=>Readable<Val>

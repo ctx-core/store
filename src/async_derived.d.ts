@@ -5,5 +5,5 @@ import type { Subscriber } from './Subscriber';
  * Creates a Readable store that derives it's value from a async function.
  * @see store_derived
  */
-export declare function async_derived<I extends unknown = unknown>(in_stores: Stores<I>, fn: (values: I | I[], set: Subscriber<I>) => Promise<I>, initial_value: I): Readable<I>;
+export declare function async_derived<Val extends unknown = unknown>(in_stores: Stores<Val>, fn: (values: Val | Val[], set: Subscriber<Val>) => Promise<Val>, initial_value: Val): Readable<Val>;
 export { async_derived as derived__async };

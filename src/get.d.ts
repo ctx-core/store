@@ -1,2 +1,2 @@
 import type { Readable } from './readable';
-export declare function get<I extends unknown>(store: Readable<I>): I;
+export declare function get<Val extends unknown = unknown>(store: Readable<Val>): Val;

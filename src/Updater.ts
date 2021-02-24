@@ -1,1 +1,1 @@
-export type Updater<I extends unknown = unknown> = (value: I) => I
+export type Updater<Val extends unknown = unknown> = (value: Val) => Val

@@ -6,12 +6,12 @@ import type { Readable } from './readable'
 /**
  * Subscribes to multiple stores. The subscriber fn is called when any of the store_a1 changes.
  */
-export function multi_subscribe<I extends unknown, J extends Readable<any> = Readable<any>>(
-	store_a1:J[],
-	fn:(($store_a1:I[])=>void)
-) {
+export function multi_subscribe<Val extends unknown, Store extends Readable<any> = Readable<any>>(
+	store_a1:Store[],
+	fn:(($store_a1:Val[])=>void)
+):Unsubscriber {
 	const unsubscribe_a1 =
-		map<Readable<I>, Unsubscriber>(store_a1,
+		map<Readable<Val>, Unsubscriber>(store_a1,
 			(store, i)=>subscribe(
 				store,
 				$store=>invoke($store, i)
@@ -24,7 +24,7 @@ export function multi_subscribe<I extends unknown, J extends Readable<any> = Rea
 					(j === i)
 					? $i_store
 					: get(store)
-			) as I[]
+			) as Val[]
 		fn(all_$store_a1)
 	}
 }

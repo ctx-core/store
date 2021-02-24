@@ -3,9 +3,10 @@ import type { Writable } from './writable'
 /**
  * Returns a function that [clear_store](#clear_store).
  */
-export function _clear_store<I extends unknown = unknown>(
-	stores: Writable<I>|Writable<I>[], value: I
-) {
-	return () => clear_store<I>(stores, value)
+export function _clear_store<Val extends unknown = unknown>(
+	stores:Writable<Val>|Writable<Val>[], value:Val
+):clear_store_T {
+	return ()=>clear_store<Val>(stores, value)
 }
+export type clear_store_T = ()=>void
 export { _clear_store as _clear__store }

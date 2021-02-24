@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 24.1.0
+
+### Minor Changes
+
+- generic type updates
+
 ## 24.0.18
 
 ### Patch Changes

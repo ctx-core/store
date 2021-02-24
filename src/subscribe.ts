@@ -5,10 +5,10 @@ import type { Readable } from './readable'
 /**
  * Delegates to store.subscribe
  */
-export function subscribe<I extends unknown = unknown>(
-	store:Readable<I>,
-	run:Subscriber<I>,
-	invalidate?:Invalidator<I>
+export function subscribe<Val extends unknown = unknown>(
+	store:Readable<Val>,
+	run:Subscriber<Val>,
+	invalidate?:Invalidator<Val>
 ) {
 	return store.subscribe(run, invalidate) as Unsubscriber
 }

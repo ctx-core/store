@@ -1,3 +1,3 @@
 import type { Readable } from './readable';
 import type { Writable } from './writable';
-export declare type WritableOrReadable<I extends unknown = unknown, S extends Readable<I> = Readable<I>> = S extends Writable<I> ? S : S extends Readable<I> ? S : never;
+export declare type WritableOrReadable<Val extends unknown = unknown, Store extends Readable<Val> = Readable<Val>> = Store extends Writable<Val> ? Store : Store extends Readable<Val> ? Store : never;

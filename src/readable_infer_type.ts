@@ -1,5 +1,5 @@
 import type { Readable } from './readable'
-export type readable_infer_type<I> =
-	I extends Readable<infer O>
-		? O
+export type readable_infer_type<Store extends Readable<unknown> = Readable<unknown>> =
+	Store extends Readable<infer Val>
+		? Val
 		: never

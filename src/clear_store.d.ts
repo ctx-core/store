@@ -2,5 +2,5 @@ import type { Writable } from './writable';
 /**
  * Sets each store with val
  */
-export declare function clear_store<I extends unknown = unknown>(stores: Writable<I> | Writable<I>[], val: I): void;
+export declare function clear_store<Val extends unknown = unknown>(stores: Writable<Val> | Writable<Val>[], val: Val): void;
 export { clear_store as clear__store };

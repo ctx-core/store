@@ -1,3 +1,3 @@
 import type { Readable } from 'svelte/store'
-export type Stores<I extends unknown = unknown> =
-	Readable<I>|[Readable<I>, ...Array<Readable<I>>];
+export type Stores<Val extends unknown = unknown> =
+	Readable<Val>|[Readable<Val>, ...Array<Readable<Val>>];

@@ -1,1 +1,1 @@
-export declare type Invalidator<I extends unknown = unknown> = (value?: I) => void;
+export declare type Invalidator<Val extends unknown = unknown> = (value?: Val) => void;

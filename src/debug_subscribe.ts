@@ -4,12 +4,12 @@ import type { Unsubscriber } from './Unsubscriber'
 /**
  * Logs (console.debug) changes to a store
  */
-export function debug_subscribe<I extends unknown = unknown>(
-	store: Readable<I>, label: string
-) {
+export function debug_subscribe<Val extends unknown = unknown>(
+	store: Readable<Val>, label: string
+):Unsubscriber {
 	try {
 		return (
-			subscribe<I>(store, value => {
+			subscribe<Val>(store, value => {
 				console.debug(label, value)
 			}) as Unsubscriber
 		)

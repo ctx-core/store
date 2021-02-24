@@ -1,1 +1,1 @@
-export type Subscriber<I extends unknown = unknown> = (value: I) => void
+export type Subscriber<Val extends unknown = unknown> = (value: Val) => void

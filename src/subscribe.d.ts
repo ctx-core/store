@@ -5,4 +5,4 @@ import type { Readable } from './readable';
 /**
  * Delegates to store.subscribe
  */
-export declare function subscribe<I extends unknown = unknown>(store: Readable<I>, run: Subscriber<I>, invalidate?: Invalidator<I>): Unsubscriber;
+export declare function subscribe<Val extends unknown = unknown>(store: Readable<Val>, run: Subscriber<Val>, invalidate?: Invalidator<Val>): Unsubscriber;

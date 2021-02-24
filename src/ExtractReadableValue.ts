@@ -1,7 +1,7 @@
 import type { Readable } from './readable'
-export type ExtractReadableValue<I extends Readable<unknown>, E extends unknown = unknown> =
-	I extends (Readable<infer O>)
-	? O
-	: Extract<I, Readable<unknown>> extends Readable<infer O>
+export type ExtractReadableValue<Store extends Readable<unknown>, Else extends unknown = unknown> =
+	Store extends (Readable<infer Val>)
+	? Val
+	: Extract<Store, Readable<unknown>> extends Readable<infer O>
 		? O
-		: E
+		: Else

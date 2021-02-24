@@ -1,14 +1,14 @@
 import type { Stores } from './Stores'
 import type { Readable } from './readable'
-export type ExtractStoresValues<I extends Stores, E extends unknown = unknown> =
-  I extends (Readable<infer O>)
-    ? O
+export type ExtractStoresValues<Store extends Stores, Else extends unknown = unknown> =
+  Store extends (Readable<infer Val>)
+    ? Val
     : {
-      [K in keyof I]: (
-        I[K] extends (Readable<infer O>)
+      [Key in keyof Store]: (
+            Store[Key] extends (Readable<infer O>)
           ? O
-          : Extract<I[K], Readable<unknown>> extends Readable<infer O>
+          : Extract<Store[Key], Readable<unknown>> extends Readable<infer O>
           ? O
-          : E
+          : Else
         );
     }

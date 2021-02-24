@@ -1,2 +1,2 @@
 import type { Writable } from './writable';
-export declare type writable_stores_type<I extends unknown = unknown> = Writable<I> | Writable<I>[];
+export declare type writable_stores_type<Val extends unknown = unknown> = Writable<Val> | Writable<Val>[];
