@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/store",
-	"version": "24.1.10",
+	"version": "24.1.12",
 	"description": "ctx-core store",
 	"keywords": [
 		"ctx-core",
@@ -27,10 +27,10 @@
 		"prepublishOnly": "npm run compile"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^20.1.18",
+		"@ctx-core/array": "workspace:^20.1.20",
 		"@ctx-core/combinators": "workspace:^6.0.5",
 		"@ctx-core/function": "workspace:^17.4.1",
-		"@ctx-core/object": "workspace:^17.3.1",
+		"@ctx-core/object": "workspace:^17.4.0",
 		"svelte": "3.35.0"
 	},
 	"devDependencies": {
