@@ -1,5 +1,13 @@
 # @ctx-core/store
 
+## 24.1.13
+
+### Patch Changes
+
+- fix: derived: array of argument Readables are sent to function as a tuple
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.0
+
 ## 24.1.12
 
 ### Patch Changes
