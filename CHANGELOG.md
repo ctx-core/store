@@ -1,5 +1,16 @@
 # @ctx-core/store
 
+## 24.1.14
+
+### Patch Changes
+
+- fix: npm run compile: tsc -b .
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.1
+  - @ctx-core/combinators@6.0.6
+  - @ctx-core/function@17.4.2
+  - @ctx-core/object@17.4.1
+
 ## 24.1.13
 
 ### Patch Changes
