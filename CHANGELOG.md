@@ -1,5 +1,16 @@
 # @ctx-core/store
 
+## 24.1.15
+
+### Patch Changes
+
+- fix: npm publish: https://github.com/npm/cli/issues/2834
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.2
+  - @ctx-core/combinators@6.0.7
+  - @ctx-core/function@17.4.3
+  - @ctx-core/object@17.4.2
+
 ## 24.1.14
 
 ### Patch Changes
