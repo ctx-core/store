@@ -1,1 +1,2 @@
-export declare type Subscriber<Val extends unknown = unknown> = (value: Val) => void;
+import type { Subscriber } from 'svelte/store';
+export type { Subscriber };

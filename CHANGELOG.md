@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 24.2.0
+
+### Minor Changes
+
+- - Readable_subscribe_T,Writable_update_T
+
 ## 24.1.22
 
 ### Patch Changes

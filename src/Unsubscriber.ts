@@ -1,1 +1,2 @@
-export type Unsubscriber = () => void
+import type { Unsubscriber } from 'svelte/store'
+export type { Unsubscriber }
