@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 24.2.1
+
+### Patch Changes
+
+- Readable_subscribe_T,Writable_update_T: <T extends unknown = unknown>
+
 ## 24.2.0
 
 ### Minor Changes
