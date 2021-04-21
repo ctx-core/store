@@ -1,5 +1,14 @@
 # @ctx-core/store
 
+## 24.2.2
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.9
+  - @ctx-core/object@17.5.7
+
 ## 24.2.1
 
 ### Patch Changes
