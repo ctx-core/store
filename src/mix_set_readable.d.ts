@@ -1,6 +1,7 @@
-import type { Readable, Updater } from 'svelte/store';
-export declare function mix_set_readable<Val extends unknown = unknown>(store: Readable<Val>, set: Updater<Val>): mix_set_readable_I<Val>;
+import type { Readable } from 'svelte/store';
+import type { Writable_set_T, Writable_update_T } from './writable';
+export declare function mix_set_readable<Val extends unknown = unknown>(store: Readable<Val>, set: Writable_set_T<Val>): mix_set_readable_I<Val>;
 export interface mix_set_readable_I<Val extends unknown = unknown> extends Readable<Val> {
-    set: Updater<Val>;
-    update(this: void, updater: Updater<Val>): void;
+    set: Writable_set_T<Val>;
+    update: Writable_update_T<Val>;
 }

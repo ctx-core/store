@@ -39,5 +39,4 @@ export * from './writable';
 export * from './writable$';
 export * from './writable_stores_type';
 export * from './writable_stores_val_type';
-export * from './Writable_update_T';
 export * from './WritableOrReadable';

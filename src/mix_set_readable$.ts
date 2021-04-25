@@ -1,11 +1,11 @@
-import type { Updater } from 'svelte/store'
 import { assign } from '@ctx-core/object'
 import type { Readable } from './readable'
 import { get } from './get'
 import type { mix_set_readable_I } from './mix_set_readable'
 import { mix_set_readable } from './mix_set_readable'
+import type { Writable_set_T } from './writable'
 export function mix_set_readable$<Val extends unknown = unknown>(
-	store:Readable<Val>, set?:Updater<Val>
+	store:Readable<Val>, set?:Writable_set_T<Val>
 ):mix_set_readable$_I<Val> {
 	if (set) {
 		mix_set_readable<Val>(store, set)
