@@ -7,9 +7,9 @@ export function readable$<Val extends unknown = unknown>(
 	value: Val, start: StartStopNotifier<Val>
 ):Readable$<Val> {
   const store = readable<Val>(value, start)
-	return mix_readable_$(store)
+	return mix_readable$(store)
 }
-export function mix_readable_$<Val extends unknown = unknown>(
+export function mix_readable$<Val extends unknown = unknown>(
 	store:Readable<Val>
 ):Readable$<Val> {
   return assign(store, {

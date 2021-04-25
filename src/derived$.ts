@@ -1,4 +1,4 @@
-import { mix_readable_$, Readable$ } from './readable$'
+import { mix_readable$, Readable$ } from './readable$'
 import { derived, derived_in_fn_type } from './derived'
 import type { Stores } from './Stores'
 export function derived$<Store extends Stores, Val extends unknown = unknown>(
@@ -7,5 +7,5 @@ export function derived$<Store extends Stores, Val extends unknown = unknown>(
 	initial_value?:Val
 ):Readable$<Val> {
 	const store = derived<Store, Val>(stores, in_fn, initial_value)
-	return mix_readable_$(store)
+	return mix_readable$(store)
 }
