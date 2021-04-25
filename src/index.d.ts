@@ -13,6 +13,8 @@ export * from './ExtractStoresValues';
 export * from './spread_derived';
 export * from './get';
 export * from './Invalidator';
+export * from './mix_set_readable';
+export * from './mix_set_readable$';
 export * from './multi_subscribe';
 export * from './noinit_subscribe';
 export * from './readable';
