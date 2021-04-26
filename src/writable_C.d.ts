@@ -1,8 +1,9 @@
-import type { Writable } from './writable';
+import type { Writable, Writable_set_T, Writable_update_T } from './writable';
+import type { Readable_subscribe_T } from './Readable_subscribe_T';
 export declare class writable_C<Val extends unknown = unknown> implements Writable<Val> {
     protected store: Writable<Val>;
     constructor(store: Writable<Val>);
-    readonly set: (this: void, value: Val) => void;
-    readonly update: (this: void, updater: import("svelte/store").Updater<Val>) => void;
-    readonly subscribe: (this: void, run: import("svelte/store").Subscriber<Val>, invalidate?: ((value?: Val | undefined) => void) | undefined) => import("svelte/store").Unsubscriber;
+    readonly set: Writable_set_T<Val>;
+    readonly update: Writable_update_T<Val>;
+    readonly subscribe: Readable_subscribe_T<Val>;
 }

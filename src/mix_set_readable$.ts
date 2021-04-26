@@ -4,6 +4,8 @@ import { get } from './get'
 import type { mix_set_readable_I } from './mix_set_readable'
 import { mix_set_readable } from './mix_set_readable'
 import type { Writable_set_T } from './writable'
+import type { Writable_update_T } from './writable'
+import type { Readable_subscribe_T } from './Readable_subscribe_T'
 export function mix_set_readable$<Val extends unknown = unknown>(
 	store:Readable<Val>, set?:Writable_set_T<Val>
 ):mix_set_readable$_I<Val> {
@@ -28,8 +30,8 @@ export interface mix_set_readable$_I<Val extends unknown = unknown> extends mix_
 }
 export class mix_set_readable$_C<Val extends unknown = unknown> implements mix_set_readable$_I<Val> {
 	constructor(protected store:mix_set_readable$_I<Val>) {}
-	readonly subscribe = this.store.subscribe
-	readonly set = this.store.set
-	readonly update = this.store.update
-	$ = this.store.$
+	readonly set:Writable_set_T<Val> = this.store.set
+	readonly update:Writable_update_T<Val> = this.store.update
+	readonly subscribe:Readable_subscribe_T<Val> = this.store.subscribe
+	$:Val = this.store.$
 }
