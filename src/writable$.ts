@@ -14,7 +14,7 @@ export function mix_writable$<Val extends unknown = unknown>(
 	return mix_set_readable$(store) as Writable$<Val>
 }
 export interface writable_mix_I<Val extends unknown = unknown> {
-	readonly $:Val
+	$:Val
 }
 export interface Writable$<Val extends unknown = unknown> extends Writable<Val>, Readable$<Val>, writable_mix_I<Val> {
 	$:Val

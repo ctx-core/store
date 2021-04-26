@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 24.5.5
+
+### Patch Changes
+
+- fix: writable_mix_I: \$: - readonly
+
 ## 24.5.4
 
 ### Patch Changes
@@ -59,7 +65,7 @@
 
 ### Minor Changes
 
-- - readable\\\\\\\\\$,derived\\\\\\\\\$,writable\\\\\\\\\$,Readable\\\\\\\\\$,Writable\$
+- - readable\\\\\\\\\\$,derived\\\\\\\\\\$,writable\\\\\\\\\\$,Readable\\\\\\\\\\$,Writable\$
 - \_readable_set_a1,\_readable_set_ctx: readable_fn argument
 
 ## 24.2.4
