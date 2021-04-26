@@ -1,5 +1,13 @@
 # @ctx-core/store
 
+## 24.5.4
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.13
+
 ## 24.5.3
 
 ### Patch Changes
@@ -51,7 +59,7 @@
 
 ### Minor Changes
 
-- - readable\\\\\\\\$,derived\\\\\\\\$,writable\\\\\\\\$,Readable\\\\\\\\$,Writable\$
+- - readable\\\\\\\\\$,derived\\\\\\\\\$,writable\\\\\\\\\$,Readable\\\\\\\\\$,Writable\$
 - \_readable_set_a1,\_readable_set_ctx: readable_fn argument
 
 ## 24.2.4
