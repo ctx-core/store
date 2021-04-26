@@ -26,3 +26,10 @@ export function mix_set_readable$<Val extends unknown = unknown>(
 export interface mix_set_readable$_I<Val extends unknown = unknown> extends mix_set_readable_I<Val> {
 	$:Val
 }
+export class mix_set_readable$_C<Val extends unknown = unknown> implements mix_set_readable$_I<Val> {
+	constructor(protected store:mix_set_readable$_I<Val>) {}
+	readonly subscribe = this.store.subscribe
+	readonly set = this.store.set
+	readonly update = this.store.update
+	$ = this.store.$
+}
