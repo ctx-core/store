@@ -30,8 +30,8 @@ export interface mix_set_readable$_I<Val extends unknown = unknown> extends mix_
 }
 export class mix_set_readable$_C<Val extends unknown = unknown> implements mix_set_readable$_I<Val> {
 	constructor(protected store:mix_set_readable$_I<Val>) {}
+	readonly subscribe:Readable_subscribe_T<Val> = this.store.subscribe
 	readonly set:Writable_set_T<Val> = this.store.set
 	readonly update:Writable_update_T<Val> = this.store.update
-	readonly subscribe:Readable_subscribe_T<Val> = this.store.subscribe
 	$:Val = this.store.$
 }

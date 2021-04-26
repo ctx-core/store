@@ -10,8 +10,8 @@ export interface mix_set_readable$_I<Val extends unknown = unknown> extends mix_
 export declare class mix_set_readable$_C<Val extends unknown = unknown> implements mix_set_readable$_I<Val> {
     protected store: mix_set_readable$_I<Val>;
     constructor(store: mix_set_readable$_I<Val>);
+    readonly subscribe: Readable_subscribe_T<Val>;
     readonly set: Writable_set_T<Val>;
     readonly update: Writable_update_T<Val>;
-    readonly subscribe: Readable_subscribe_T<Val>;
     $: Val;
 }
