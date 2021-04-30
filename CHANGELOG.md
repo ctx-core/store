@@ -1,5 +1,13 @@
 # @ctx-core/store
 
+## 24.5.9
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.18
+
 ## 24.5.8
 
 ### Patch Changes
@@ -22,7 +30,7 @@
 
 ### Patch Changes
 
-- fix: mix_set_readable\\\$: get \\\$,set \$
+- fix: mix_set_readable\\\\$: get \\\\$,set \$
 - readable$: get $
 
 ## 24.5.5
@@ -90,7 +98,7 @@
 
 ### Minor Changes
 
-- - readable\\\\\\\\\\\\\$,derived\\\\\\\\\\\\\$,writable\\\\\\\\\\\\\$,Readable\\\\\\\\\\\\\$,Writable\$
+- - readable\\\\\\\\\\\\\\$,derived\\\\\\\\\\\\\\$,writable\\\\\\\\\\\\\\$,Readable\\\\\\\\\\\\\\$,Writable\$
 - \_readable_set_a1,\_readable_set_ctx: readable_fn argument
 
 ## 24.2.4
