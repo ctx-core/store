@@ -1,5 +1,15 @@
 # @ctx-core/store
 
+## 24.7.4
+
+### Patch Changes
+
+- subscribe_wait,subscribe_wait_timeout: + Val generic
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.20
+  - @ctx-core/object@17.5.17
+
 ## 24.7.3
 
 ### Patch Changes
