@@ -1,10 +1,10 @@
 import type { Readable } from 'svelte/store'
 import type { ExtractReadableValue } from './ExtractReadableValue'
-export function subscribe_wait<Val extends unknown = unknown, Store extends Readable<Val> = Readable<Val>>(
+export function subscribe_wait<Store extends Readable<unknown>>(
 	store:Store,
-	condition_fn = (val:Val)=>!!val
+	condition_fn = (val:ExtractReadableValue<Store>)=>!!val
 ) {
-	return new Promise<Val>(resolve=>{
+	return new Promise<ExtractReadableValue<Store>>(resolve=>{
 		let unsubscribe:()=>void, unsubscribe_oninit = false
 		unsubscribe = store.subscribe(val=>{
 			if (condition_fn(val as ExtractReadableValue<Store>)) {

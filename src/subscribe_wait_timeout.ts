@@ -1,12 +1,13 @@
 import { promise_timeout } from '@ctx-core/function'
+import type { ExtractReadableValue } from './ExtractReadableValue'
 import { subscribe_wait } from './subscribe_wait'
 import type { Readable } from './readable'
-export function subscribe_wait_timeout<Val extends unknown = unknown, Store extends Readable<Val> = Readable<Val>>(
+export function subscribe_wait_timeout<Store extends Readable<unknown>>(
 	store:Store,
-	condition_fn = (val:Val)=>!!val,
+	condition_fn = (val:ExtractReadableValue<Store>)=>!!val,
 	timeout:number
 ) {
-	return promise_timeout<Val>(subscribe_wait<Val, Store>(store, condition_fn), timeout)
+	return promise_timeout<ExtractReadableValue<Store>>(subscribe_wait(store, condition_fn), timeout)
 }
 export {
 	subscribe_wait_timeout as subscribe_wait_for_timeout

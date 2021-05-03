@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 24.7.5
+
+### Patch Changes
+
+- subscribe_wait_timeout,subscribe_wait: - Val generic
+
 ## 24.7.4
 
 ### Patch Changes
