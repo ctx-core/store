@@ -1,5 +1,12 @@
 # @ctx-core/store
 
+## 24.7.7
+
+### Patch Changes
+
+- readable$_C: wraps a Readable instead of a Readable$
+- writable$_C: wraps a Writable instead of a Writable$
+
 ## 24.7.6
 
 ### Patch Changes
