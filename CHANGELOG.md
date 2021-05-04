@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 24.7.12
+
+### Patch Changes
+
+- svelte: 3.38.1 -> 3.38.2
+
 ## 24.7.11
 
 ### Patch Changes
@@ -28,7 +34,7 @@
 
 ### Patch Changes
 
-- readable\\\\$\\\\_C,writable\\\\$\\\\\_C: public get/set \$
+- readable\\\\\$\\\\\_C,writable\\\\\$\\\\\\_C: public get/set \$
 
 ## 24.7.7
 
