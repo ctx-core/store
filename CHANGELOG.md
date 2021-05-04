@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 24.7.6
+
+### Patch Changes
+
+- fix: writable$_C: $: get/set
+
 ## 24.7.5
 
 ### Patch Changes

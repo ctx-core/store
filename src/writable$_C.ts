@@ -1,10 +1,13 @@
 import type { Writable$ } from './writable$'
 import type { Writable_set_T, Writable_update_T } from './writable'
-import type { Readable_subscribe_T } from './Readable_subscribe_T'
-export class writable$_C<Val extends unknown = unknown> implements Writable$<Val> {
-	constructor(protected store:Writable$<Val>) {}
-	readonly subscribe:Readable_subscribe_T<Val> = this.store.subscribe
+import { readable$_C } from './readable$_C'
+export class writable$_C<Val extends unknown = unknown> extends readable$_C<Val> implements Writable$<Val> {
+	constructor(protected store:Writable$<Val>) {
+		super(store)
+	}
 	readonly set:Writable_set_T<Val> = this.store.set
 	readonly update:Writable_update_T<Val> = this.store.update
-	$:Val = this.store.$
+	set $(val) {
+		this.store.set(val)
+	}
 }
