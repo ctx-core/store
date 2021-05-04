@@ -6,5 +6,6 @@ export declare class writable$_C<Val extends unknown = unknown> extends readable
     constructor(store: Writable<Val>);
     readonly set: Writable_set_T<Val>;
     readonly update: Writable_update_T<Val>;
-    set $(val: any);
+    get $(): Val;
+    set $(val: Val);
 }
