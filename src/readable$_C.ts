@@ -5,7 +5,7 @@ import { get } from './get'
 export class readable$_C<Val extends unknown = unknown> implements Readable$<Val> {
 	constructor(protected store:Readable<Val>) {}
 	readonly subscribe:Readable_subscribe_T<Val> = this.store.subscribe
-	get $():Val {
+	public get $():Val {
 		return get(this.store)
 	}
 }

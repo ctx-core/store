@@ -7,7 +7,7 @@ export class writable$_C<Val extends unknown = unknown> extends readable$_C<Val>
 	}
 	readonly set:Writable_set_T<Val> = this.store.set
 	readonly update:Writable_update_T<Val> = this.store.update
-	set $(val) {
+	public set $(val) {
 		this.store.set(val)
 	}
 }

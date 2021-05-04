@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 24.7.8
+
+### Patch Changes
+
+- readable\$\_C,writable\$\\_C: public get/set \$
+
 ## 24.7.7
 
 ### Patch Changes
