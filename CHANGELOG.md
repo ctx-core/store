@@ -1,5 +1,14 @@
 # @ctx-core/store
 
+## 24.7.16
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.2.26
+  - @ctx-core/object@17.5.23
+
 ## 24.7.15
 
 ### Patch Changes
@@ -61,7 +70,7 @@
 
 ### Patch Changes
 
-- readable\\\\\\\\$\\\\\\\\_C,writable\\\\\\\\$\\\\\\\\\_C: public get/set \$
+- readable\\\\\\\\\$\\\\\\\\\_C,writable\\\\\\\\\$\\\\\\\\\\_C: public get/set \$
 
 ## 24.7.7
 
