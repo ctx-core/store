@@ -4,7 +4,8 @@ import { subscribe_wait } from './subscribe_wait'
 import type { Readable } from './readable'
 export function subscribe_wait_timeout<Store extends Readable<unknown>>(
 	store:Store,
-	condition_fn = (val:ExtractReadableValue<Store>)=>!!val,
+	condition_fn:(val:ExtractReadableValue<Store>)=>any =
+		(val:ExtractReadableValue<Store>)=>!!val,
 	timeout:number
 ) {
 	return promise_timeout<ExtractReadableValue<Store>>(subscribe_wait(store, condition_fn), timeout)

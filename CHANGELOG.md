@@ -1,5 +1,11 @@
 # @ctx-core/store
 
+## 24.7.19
+
+### Patch Changes
+
+- fix: subscribe_wait,subscribe_wait_timeout: fn argument: return type any
+
 ## 24.7.18
 
 ### Patch Changes
@@ -85,7 +91,7 @@
 
 ### Patch Changes
 
-- readable\\\\\\\\\\\$\\\\\\\\\\\_C,writable\\\\\\\\\\\$\\\\\\\\\\\\_C: public get/set \$
+- readable\\\\\\\\\\\\$\\\\\\\\\\\\_C,writable\\\\\\\\\\\\$\\\\\\\\\\\\\_C: public get/set \$
 
 ## 24.7.7
 
