@@ -1,5 +1,17 @@
 # @ctx-core/store
 
+## 24.7.23
+
+### Patch Changes
+
+- update dependencies
+
+## 24.7.22
+
+### Patch Changes
+
+- update dependencies
+
 ## 24.7.21
 
 ### Patch Changes
@@ -105,7 +117,7 @@
 
 ### Patch Changes
 
-- readable\\\\\\\\\\\\\\$\\\\\\\\\\\\\\_C,writable\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\_C: public get/set \$
+- readable\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\_C,writable\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\_C: public get/set \$
 
 ## 24.7.7
 
