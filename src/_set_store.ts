@@ -1,9 +1,13 @@
 import { set } from './set'
+import type { Writable } from './writable'
 /**
  * Returns a function to set the given store using the value returned by `setter`.
  * This is useful in conjunction with [subscribe](#subscribe).
  */
-export function _set_store<Val extends unknown = unknown>(store, setter = (v:Val)=>v):set_store_T<Val> {
+export function _set_store<Val extends unknown = unknown>(
+	store:Writable<Val>,
+	setter = (v:Val)=>v
+):set_store_T<Val> {
 	return (val:Val)=>
 		set<Val>(store,
 			typeof setter === 'function'

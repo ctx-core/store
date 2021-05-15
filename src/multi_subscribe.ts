@@ -14,10 +14,10 @@ export function multi_subscribe<Val extends unknown, Store extends Readable<any>
 		map<Readable<Val>, Unsubscriber>(store_a1,
 			(store, i)=>subscribe(
 				store,
-				$store=>invoke($store, i)
+				($store:Val)=>invoke($store, i)
 			))
 	return ()=>each<Unsubscriber>(unsubscribe_a1, unsubscribe=>unsubscribe())
-	function invoke($i_store, i) {
+	function invoke($i_store:Val, i:number) {
 		const all_$store_a1 =
 			map(store_a1,
 				(store, j)=>

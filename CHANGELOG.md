@@ -1,5 +1,19 @@
 # @ctx-core/store
 
+## 24.8.0
+
+### Minor Changes
+
+- "noImplicitAny": true
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.3.0
+  - @ctx-core/combinators@6.1.0
+  - @ctx-core/function@17.9.0
+  - @ctx-core/object@17.6.0
+
 ## 24.7.24
 
 ### Patch Changes
@@ -123,7 +137,7 @@
 
 ### Patch Changes
 
-- readable\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\_C,writable\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\_C: public get/set \$
+- readable\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\_C,writable\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\_C: public get/set \$
 
 ## 24.7.7
 
