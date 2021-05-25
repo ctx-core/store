@@ -20,7 +20,7 @@ export function multi_subscribe<Val extends unknown, Store extends Readable<any>
 	function invoke($i_store:Val, i:number) {
 		const all_$store_a1 =
 			map(store_a1,
-				(store, j)=>
+				(store, j:number)=>
 					(j === i)
 					? $i_store
 					: get(store)

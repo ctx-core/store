@@ -1,5 +1,19 @@
 # @ctx-core/store
 
+## 24.10.0
+
+### Minor Changes
+
+- fix tsc build directory issues
+
+### Patch Changes
+
+- Updated dependencies [undefined]
+  - @ctx-core/array@20.5.0
+  - @ctx-core/combinators@6.3.0
+  - @ctx-core/function@17.11.0
+  - @ctx-core/object@18.2.0
+
 ## 24.9.2
 
 ### Patch Changes
@@ -257,7 +271,7 @@
 
 ### Patch Changes
 
-- readable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C,writable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C: public get/set \$
+- readable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C,writable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C: public get/set \$
 
 ## 24.7.7
 
