@@ -1,5 +1,15 @@
 # @ctx-core/store
 
+## 24.10.1
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies [undefined]
+  - @ctx-core/combinators@6.3.1
+  - @ctx-core/function@17.11.1
+  - @ctx-core/object@18.2.1
+
 ## 24.10.0
 
 ### Minor Changes
@@ -271,7 +281,7 @@
 
 ### Patch Changes
 
-- readable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C,writable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C: public get/set \$
+- readable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C,writable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C: public get/set \$
 
 ## 24.7.7
 
