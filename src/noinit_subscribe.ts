@@ -9,12 +9,12 @@ export function noinit_subscribe<Val extends unknown = unknown>(
 	store: Readable<Val>, run: Subscriber<Val>
 ):Unsubscriber {
 	let beyond_init = false
-	return subscribe<Val>(store, (...arg_a1)=>{
+	return subscribe<Val>(store, (...arg_a)=>{
 		if (!beyond_init) {
 			beyond_init = true
 			return
 		}
-		return run(...arg_a1)
+		return run(...arg_a)
 	}) as Unsubscriber
 }
 export { noinit_subscribe as subscribe__noinit }

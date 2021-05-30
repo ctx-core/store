@@ -12,12 +12,12 @@ export function mix_readable$<Val extends unknown = unknown>(
 	store:Readable<Val>
 ):Readable$<Val> {
 	Object.defineProperties(store, Object.getOwnPropertyDescriptors({
-		get $() {
-			return get(store)
-		}
+		get $() {return get(store)},
+		get _() {return get(store)},
 	}))
 	return store as Readable$<Val>
 }
 export interface Readable$<Val extends unknown = unknown> extends Readable<Val> {
 	readonly $:Val
+	readonly _:Val
 }

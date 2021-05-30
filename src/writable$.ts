@@ -15,7 +15,9 @@ export function mix_writable$<Val extends unknown = unknown>(
 }
 export interface writable_mix_I<Val extends unknown = unknown> {
 	$:Val
+	_:Val
 }
 export interface Writable$<Val extends unknown = unknown> extends Writable<Val>, Readable$<Val>, writable_mix_I<Val> {
 	$:Val
+	_:Val
 }
