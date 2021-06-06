@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/store",
-	"version": "25.1.10",
+	"version": "25.1.11",
 	"description": "ctx-core store",
 	"keywords": [
 		"ctx-core",
@@ -27,7 +27,7 @@
 		"prepublishOnly": "npm run compile"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^21.2.3",
+		"@ctx-core/array": "workspace:^21.2.5",
 		"@ctx-core/combinators": "workspace:^6.3.1",
 		"@ctx-core/function": "workspace:^18.1.1",
 		"@ctx-core/object": "workspace:^19.1.1",
