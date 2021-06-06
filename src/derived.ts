@@ -1,5 +1,5 @@
 import { derived as in_derived } from 'svelte/store'
-import { tuple_, isArray } from '@ctx-core/array'
+import { tup, isArray } from '@ctx-core/array'
 import type { Readable } from './readable'
 import type { Stores } from './Stores'
 import type { ExtractStoresValues } from './ExtractStoresValues'
@@ -17,7 +17,7 @@ export function derived<Store extends Stores, Val extends unknown = unknown>(
 			stores,
 			((values:StoresValues<Store>)=>{
 				return fn(
-					(isArray(values) ? tuple_(...values) : values) as ExtractStoresValues<Store>
+					(isArray(values) ? tup(...values) : values) as ExtractStoresValues<Store>
 				) as Val
 			}) as derived_return_in_fn_T<Store, Val>
 		)
@@ -25,7 +25,7 @@ export function derived<Store extends Stores, Val extends unknown = unknown>(
 			stores,
 			((values:StoresValues<Store>, set:(value:Val)=>void)=>{
 				return fn(
-					(isArray(values) ? tuple_(...values) : values) as ExtractStoresValues<Store>, set
+					(isArray(values) ? tup(...values) : values) as ExtractStoresValues<Store>, set
 				) as Unsubscriber|void
 			}) as derived_set_in_fn_T<Store, Val>,
 			initial_value
