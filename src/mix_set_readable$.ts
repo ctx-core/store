@@ -21,12 +21,19 @@ export function mix_set_readable$<Val extends unknown = unknown>(
 		},
 		set $(val) {
 			mix_set_readable_store.set(val)
-		}
+		},
+		get _() {
+			return get(store)
+		},
+		set _(val) {
+			mix_set_readable_store.set(val)
+		},
 	}))
 	return mix_set_readable_store as mix_set_readable$_I<Val>
 }
 export interface mix_set_readable$_I<Val extends unknown = unknown> extends mix_set_readable_I<Val> {
 	$:Val
+	_:Val
 }
 export class mix_set_readable$_C<Val extends unknown = unknown> implements mix_set_readable$_I<Val> {
 	constructor(protected store:mix_set_readable$_I<Val>) {}
@@ -34,4 +41,5 @@ export class mix_set_readable$_C<Val extends unknown = unknown> implements mix_s
 	readonly set:Writable_set_T<Val> = this.store.set
 	readonly update:Writable_update_T<Val> = this.store.update
 	$:Val = this.store.$
+	_:Val = this.store._
 }
