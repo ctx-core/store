@@ -1,5 +1,16 @@
 # @ctx-core/store
 
+## 26.0.6
+
+### Patch Changes
+
+- npm run prepare instead of npm run prepublishOnly
+- Updated dependencies [undefined]
+  - @ctx-core/array@22.0.6
+  - @ctx-core/combinators@7.0.4
+  - @ctx-core/function@19.1.4
+  - @ctx-core/object@20.0.5
+
 ## 26.0.5
 
 ### Patch Changes
@@ -535,7 +546,7 @@
 
 ### Patch Changes
 
-- readable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C,writable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C: public get/set \$
+- readable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C,writable\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_C: public get/set \$
 
 ## 24.7.7
 
@@ -591,4 +602,4 @@
 ### Minor Changes
 
 - \_readable_set_ctx_set_type->\_readable_set_ctx_set_T,readable_set_ctx_type->readable_set_ctx_T,\_readable_set_a1_set_type->\_readable_set_a1_set_T,\_readable_set_a1_type->\_readable_set_a1_T
-- feat: \readable\\\\\\\\\\\\\\\\\\\\\\\\\\\*set_ctx\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\*,\\\\\\\\\\\\\\\\\\\\\\\\\\\\_readable_set_a1\$
+- feat: \readable\\\\\\\\\\\\\\\\\\\\\\\\\\\\*set_ctx\\\\\\\\\\\\\\\\\\\\\\\\\\\\\$\\\\\\\\\\\\\\\\\\\\\\\\\\\\*,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\_readable_set_a1\$
