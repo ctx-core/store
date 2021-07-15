@@ -1,8 +1,8 @@
 import type { Readable, Updater } from 'svelte/store'
 import { assign } from '@ctx-core/object'
-import { get } from './get'
-import type { Writable_set_T, Writable_update_T } from './writable'
-import type { Readable_subscribe_T } from './Readable_subscribe_T'
+import { get } from './get.js'
+import type { Writable_set_T, Writable_update_T } from './writable.js'
+import type { Readable_subscribe_T } from './Readable_subscribe_T.js'
 export function mix_set_readable<Val extends unknown = unknown>(
 	store:Readable<Val>, set:Writable_set_T<Val>
 ):mix_set_readable_I<Val> {

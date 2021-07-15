@@ -1,4 +1,4 @@
-import type { Readable } from './readable'
+import type { Readable } from './readable.js'
 export type ExtractReadableValue<Store extends Readable<unknown>, Else extends unknown = unknown> =
 	Store extends (Readable<infer Val>)
 	? Val

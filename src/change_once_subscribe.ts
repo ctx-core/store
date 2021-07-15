@@ -1,7 +1,7 @@
-import { noinit_subscribe } from './noinit_subscribe'
-import type { Readable } from './readable'
-import type { Subscriber } from './Subscriber'
-import type { Unsubscriber } from './Unsubscriber'
+import { noinit_subscribe } from './noinit_subscribe.js'
+import type { Readable } from './readable.js'
+import type { Subscriber } from './Subscriber.js'
+import type { Unsubscriber } from './Unsubscriber.js'
 /**
  * Calls the given fn the next time the value of the store changes, then unsubscribes.
  */

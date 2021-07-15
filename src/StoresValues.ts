@@ -1,4 +1,4 @@
-import type { Readable } from './readable'
+import type { Readable } from './readable.js'
 export type StoresValues<T> =
   T extends Readable<infer U>
     ? U

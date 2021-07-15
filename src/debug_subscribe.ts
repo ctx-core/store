@@ -1,6 +1,6 @@
-import { subscribe } from './subscribe'
-import type { Readable } from './readable'
-import type { Unsubscriber } from './Unsubscriber'
+import { subscribe } from './subscribe.js'
+import type { Readable } from './readable.js'
+import type { Unsubscriber } from './Unsubscriber.js'
 /**
  * Logs (console.debug) changes to a store
  */

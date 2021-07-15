@@ -1,7 +1,7 @@
-import { Readable, readable } from './readable'
-import { get } from './get'
-import type { StartStopNotifier } from './StartStopNotifier'
-import type { Subscriber } from './Subscriber'
+import { Readable, readable } from './readable.js'
+import { get } from './get.js'
+import type { StartStopNotifier } from './StartStopNotifier.js'
+import type { Subscriber } from './Subscriber.js'
 export function readable_set_ctx_<Val extends unknown = unknown>(
 	initial:Val, readable_fn = readable
 ):readable_set_ctx_T<Val> {

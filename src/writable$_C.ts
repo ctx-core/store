@@ -1,7 +1,7 @@
-import type { Writable$ } from './writable$'
-import type { Writable, Writable_set_T, Writable_update_T } from './writable'
-import { readable$_C } from './readable$_C'
-import { get } from './get'
+import type { Writable$ } from './writable$.js'
+import type { Writable, Writable_set_T, Writable_update_T } from './writable.js'
+import { readable$_C } from './readable$_C.js'
+import { get } from './get.js'
 export class writable$_C<Val extends unknown = unknown> extends readable$_C<Val> implements Writable$<Val> {
 	constructor(protected store:Writable<Val>) {
 		super(store)

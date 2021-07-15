@@ -1,5 +1,5 @@
 import type { Readable } from 'svelte/store'
-import type { ExtractReadableValue } from './ExtractReadableValue'
+import type { ExtractReadableValue } from './ExtractReadableValue.js'
 export function subscribe_wait<Store extends Readable<unknown>>(
 	store:Store,
 	condition_fn:(val:ExtractReadableValue<Store>)=>any =

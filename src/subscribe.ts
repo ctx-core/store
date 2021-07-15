@@ -1,7 +1,7 @@
 import type { Unsubscriber } from 'svelte/store'
-import type { Subscriber } from './Subscriber'
-import type { Invalidator } from './Invalidator'
-import type { Readable } from './readable'
+import type { Subscriber } from './Subscriber.js'
+import type { Invalidator } from './Invalidator.js'
+import type { Readable } from './readable.js'
 /**
  * Delegates to store.subscribe
  */

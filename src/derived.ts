@@ -1,10 +1,10 @@
 import { derived as in_derived } from 'svelte/store'
 import { tup, isArray } from '@ctx-core/array'
-import type { Readable } from './readable'
-import type { Stores } from './Stores'
-import type { ExtractStoresValues } from './ExtractStoresValues'
-import type { Unsubscriber } from './Unsubscriber'
-import type { StoresValues } from './StoresValues'
+import type { Readable } from './readable.js'
+import type { Stores } from './Stores.js'
+import type { ExtractStoresValues } from './ExtractStoresValues.js'
+import type { Unsubscriber } from './Unsubscriber.js'
+import type { StoresValues } from './StoresValues.js'
 export function derived<Store extends Stores, Val extends unknown = unknown>(
 	stores:Store,
 	in_fn:derived_in_fn_T<Store, Val>,

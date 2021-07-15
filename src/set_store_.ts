@@ -1,5 +1,5 @@
-import { set } from './set'
-import type { Writable } from './writable'
+import { set } from './set.js'
+import type { Writable } from './writable.js'
 /**
  * Returns a function to set the given store using the value returned by `setter`.
  * This is useful in conjunction with [subscribe](#subscribe).

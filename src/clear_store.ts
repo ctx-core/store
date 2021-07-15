@@ -1,6 +1,6 @@
 import { wrap_a_ } from '@ctx-core/function'
 import { each } from '@ctx-core/array'
-import type { Writable } from './writable'
+import type { Writable } from './writable.js'
 /**
  * Sets each store with val
  */

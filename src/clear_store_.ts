@@ -1,5 +1,5 @@
-import { clear_store } from './clear_store'
-import type { Writable } from './writable'
+import { clear_store } from './clear_store.js'
+import type { Writable } from './writable.js'
 /**
  * Returns a function that [clear_store](#clear_store).
  */

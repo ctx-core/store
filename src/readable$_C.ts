@@ -1,7 +1,7 @@
-import type { Readable$ } from './readable$'
-import type { Readable } from './readable'
-import type { Readable_subscribe_T } from './Readable_subscribe_T'
-import { get } from './get'
+import type { Readable$ } from './readable$.js'
+import type { Readable } from './readable.js'
+import type { Readable_subscribe_T } from './Readable_subscribe_T.js'
+import { get } from './get.js'
 export class readable$_C<Val extends unknown = unknown> implements Readable$<Val> {
 	constructor(protected store:Readable<Val>) {}
 	readonly subscribe:Readable_subscribe_T<Val> = this.store.subscribe

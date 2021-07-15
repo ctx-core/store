@@ -1,7 +1,7 @@
-import { get } from './get'
-import type { Readable } from './readable'
-import type { StartStopNotifier } from './StartStopNotifier'
-import { readable } from './readable'
+import { get } from './get.js'
+import type { Readable } from './readable.js'
+import type { StartStopNotifier } from './StartStopNotifier.js'
+import { readable } from './readable.js'
 export function readable$<Val extends unknown = unknown>(
 	value:Val, start:StartStopNotifier<Val>
 ):Readable$<Val> {

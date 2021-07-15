@@ -1,7 +1,7 @@
-import type { StartStopNotifier } from './StartStopNotifier'
-import { writable, Writable } from './writable'
-import type { Readable$ } from './readable$'
-import { mix_set_readable$ } from './mix_set_readable$'
+import type { StartStopNotifier } from './StartStopNotifier.js'
+import { writable, Writable } from './writable.js'
+import type { Readable$ } from './readable$.js'
+import { mix_set_readable$ } from './mix_set_readable$.js'
 export function writable$<Val extends unknown = unknown>(
 	value:Val, start?:StartStopNotifier<Val>
 ):Writable$<Val> {

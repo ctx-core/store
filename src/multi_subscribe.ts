@@ -1,8 +1,8 @@
 import { each, map } from '@ctx-core/array'
-import { get } from './get'
-import { subscribe } from './subscribe'
-import type { Unsubscriber } from './Unsubscriber'
-import type { Readable } from './readable'
+import { get } from './get.js'
+import { subscribe } from './subscribe.js'
+import type { Unsubscriber } from './Unsubscriber.js'
+import type { Readable } from './readable.js'
 /**
  * Subscribes to multiple stores. The subscriber fn is called when any of the store_a changes.
  */

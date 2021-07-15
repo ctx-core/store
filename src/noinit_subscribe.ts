@@ -1,7 +1,7 @@
-import { subscribe } from './subscribe'
-import type { Readable } from './readable'
-import type { Unsubscriber } from './Unsubscriber'
-import type { Subscriber } from './Subscriber'
+import { subscribe } from './subscribe.js'
+import type { Readable } from './readable.js'
+import type { Unsubscriber } from './Unsubscriber.js'
+import type { Subscriber } from './Subscriber.js'
 /**
  * Subscribes the run to store but does not have the initial call.
  */

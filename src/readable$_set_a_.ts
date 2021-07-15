@@ -1,6 +1,6 @@
-import { readable } from './readable'
-import { readable_set_a_, readable_set_a__set_T } from './readable_set_a_'
-import { mix_readable$, Readable$ } from './readable$'
+import { readable } from './readable.js'
+import { readable_set_a_, readable_set_a__set_T } from './readable_set_a_.js'
+import { mix_readable$, Readable$ } from './readable$.js'
 export function readable$_set_a_<Val extends unknown = unknown>(
 	initial:Val, readable_ = readable
 ):readable$_set_a__T<Val> {
