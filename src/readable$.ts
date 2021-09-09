@@ -3,7 +3,7 @@ import type { Readable } from './readable.js'
 import type { StartStopNotifier } from './StartStopNotifier.js'
 import { readable } from './readable.js'
 export function readable$<Val extends unknown = unknown>(
-	value:Val, start:StartStopNotifier<Val>
+	value:Val, start?:StartStopNotifier<Val>
 ):Readable$<Val> {
 	const store = readable<Val>(value, start)
 	return mix_readable$(store)
