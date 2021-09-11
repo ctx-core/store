@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/store",
-	"version": "27.0.28",
+	"version": "27.0.29",
 	"description": "ctx-core store",
 	"keywords": [
 		"ctx-core",
@@ -36,10 +36,10 @@
 		"prepublishOnly": "npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^23.0.19",
+		"@ctx-core/array": "workspace:^23.0.20",
 		"@ctx-core/combinators": "workspace:^8.0.15",
-		"@ctx-core/function": "workspace:^20.1.4",
-		"@ctx-core/object": "workspace:^21.0.18",
+		"@ctx-core/function": "workspace:^20.2.0",
+		"@ctx-core/object": "workspace:^21.0.19",
 		"esm": "^3.2.25",
 		"svelte": "3.42.5"
 	},
