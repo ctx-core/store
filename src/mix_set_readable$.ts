@@ -41,5 +41,5 @@ export class mix_set_readable$_C<Val extends unknown = unknown> implements mix_s
 	readonly set:Writable_set_T<Val> = this.store.set
 	readonly update:Writable_update_T<Val> = this.store.update
 	$:Val = this.store.$
-	_:Val = this.store._
+	_:Val = this.store.$
 }
