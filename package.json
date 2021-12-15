@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/store",
-	"version": "27.0.47",
+	"version": "27.0.48",
 	"description": "ctx-core store",
 	"keywords": [
 		"ctx-core",
@@ -32,10 +32,10 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/array": "workspace:^23.0.33",
-		"@ctx-core/combinators": "workspace:^8.0.26",
-		"@ctx-core/function": "workspace:^20.2.12",
-		"@ctx-core/object": "workspace:^22.0.0",
+		"@ctx-core/array": "workspace:^23.0.34",
+		"@ctx-core/combinators": "workspace:^8.0.27",
+		"@ctx-core/function": "workspace:^20.2.13",
+		"@ctx-core/object": "workspace:^22.0.1",
 		"svelte": "^3.44.3"
 	},
 	"devDependencies": {
@@ -47,5 +47,6 @@
 	"publishConfig": {
 		"access": "public",
 		"cache": "~/.npm"
-	}
+	},
+	"svelte": "./dist/index.js"
 }
