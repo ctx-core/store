@@ -9,7 +9,7 @@
       "name": "pnpm",
       "message": "`pnpm add` requires the package name",
       "code": "ERR_PNPM_MISSING_PACKAGE_NAME",
-      "stack": "pnpm: `pnpm add` requires the package name\n    at Object.handler [as add] (/home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.24.3/node_modules/pnpm/dist/pnpm.cjs:118819:15)\n    at /home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.24.3/node_modules/pnpm/dist/pnpm.cjs:183655:83\n    at async run (/home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.24.3/node_modules/pnpm/dist/pnpm.cjs:183631:34)\n    at async runPnpm (/home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.24.3/node_modules/pnpm/dist/pnpm.cjs:183843:5)\n    at async /home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.24.3/node_modules/pnpm/dist/pnpm.cjs:183835:7"
+      "stack": "pnpm: `pnpm add` requires the package name\n    at Object.handler [as add] (/home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.24.3/node_modules/pnpm/lib/pnpm.cjs:118819:15)\n    at /home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.24.3/node_modules/pnpm/lib/pnpm.cjs:183655:83\n    at async run (/home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.24.3/node_modules/pnpm/lib/pnpm.cjs:183631:34)\n    at async runPnpm (/home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.24.3/node_modules/pnpm/lib/pnpm.cjs:183843:5)\n    at async /home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.24.3/node_modules/pnpm/lib/pnpm.cjs:183835:7"
     }
   }
 }
